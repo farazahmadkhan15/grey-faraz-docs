@@ -1,12 +1,14 @@
 {
-  "name": "nuxt-content",
+  "name": "grey-docs",
   "private": true,
-  "description": "Write your content inside your Nuxt app",
-  "repository": "nuxt/content",
+  "description": "Grey Software's Docs theme",
   "license": "MIT",
   "contributors": [
     {
       "name": "NuxtJS Team"
+    },
+    {
+      "name": "Grey Software Team"
     }
   ],
   "workspaces": [
