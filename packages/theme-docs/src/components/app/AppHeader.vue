@@ -66,6 +66,20 @@
             >
               <IconGithub class="w-5 h-5" />
             </a>
+            <a
+              v-if="settings.github"
+              :href="githubUrls.repo"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Github"
+              name="Github"
+              class="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark-hover:text-primary-500 ml-4"
+              :class="{
+                'hidden lg:block': settings.layout !== 'single'
+              }"
+            >
+              <IconGithub class="w-5 h-5" />
+            </a>
 
             <button
               v-if="settings.layout !== 'single'"

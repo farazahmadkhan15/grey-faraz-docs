@@ -17,7 +17,7 @@
     "dev": "nuxt-ts example",
     "docs": "nuxt docs",
     "lint": "eslint --ext .js,.vue .",
-    "release": "yarn test && lerna publish",
+    "release": "lerna publish",
     "test": "yarn lint && yarn test:packages",
     "test:watch": "jest packages --watch",
     "test:packages": "jest packages -i",

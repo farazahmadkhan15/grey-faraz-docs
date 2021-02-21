@@ -1,7 +1,6 @@
 {
-  "name": "@nuxt/content-theme-docs",
-  "version": "0.10.1",
-  "repository": "nuxt/content",
+  "name": "nuxt-content-docs-theme-grey",
+  "version": "0.10.1-gs2",
   "license": "MIT",
   "files": [
     "src"
