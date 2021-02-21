@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0-gs2.0 (2021-02-21)
+
+
+### Bug Fixes
+
+* **theme-docs:** avoid exposing `GITHUB_TOKEN` ([#549](https://gitlab.com/grey-software/templates/grey-docs/issues/549)) ([206e778](https://gitlab.com/grey-software/templates/grey-docs/commit/206e778fac72c67d8edf29b7ddfc273bd6b51bf5))
+* use new docs link ([#414](https://gitlab.com/grey-software/templates/grey-docs/issues/414)) ([524b7e1](https://gitlab.com/grey-software/templates/grey-docs/commit/524b7e100f76a8a2910c047a2e5be1bf13eb8d59))
+
+
+### Features
+
+* **theme-docs:** support `docs.primaryColor` ([#507](https://gitlab.com/grey-software/templates/grey-docs/issues/507)) ([cefb24e](https://gitlab.com/grey-software/templates/grey-docs/commit/cefb24efeb8e8f05d91e1acd3528aa556296acd5))
+* new create-nuxt-content-docs package ([#336](https://gitlab.com/grey-software/templates/grey-docs/issues/336)) ([34439eb](https://gitlab.com/grey-software/templates/grey-docs/commit/34439eb1c339c47e00280a139f8fe5725841751f))
+* reduce page jank ([#433](https://gitlab.com/grey-software/templates/grey-docs/issues/433)) ([b5b419f](https://gitlab.com/grey-software/templates/grey-docs/commit/b5b419f8af421c034b5207af321cdf266abedd64))
+* support github custom domain ([#458](https://gitlab.com/grey-software/templates/grey-docs/issues/458)) ([d01e134](https://gitlab.com/grey-software/templates/grey-docs/commit/d01e1347f88006948929ced9dfa6dd97e3fa2008))
+
+
+
+
+
 ## [0.4.5](https://github.com/nuxt/content/compare/create-nuxt-content-docs@0.4.4...create-nuxt-content-docs@0.4.5) (2021-02-10)
 
 **Note:** Version bump only for package create-nuxt-content-docs
