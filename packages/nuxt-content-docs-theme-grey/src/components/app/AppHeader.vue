@@ -68,17 +68,17 @@
             </a>
             <a
               v-if="settings.github"
-              :href="githubUrls.repo"
+              :href="`https://gitlab.com/${settings.gitlab}`"
               target="_blank"
               rel="noopener noreferrer"
-              title="Github"
-              name="Github"
+              title="Gitlab"
+              name="Gitlab"
               class="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark-hover:text-primary-500 ml-4"
               :class="{
                 'hidden lg:block': settings.layout !== 'single'
               }"
             >
-              <IconGithub class="w-5 h-5" />
+              <IconGitlab class="w-5 h-5" />
             </a>
 
             <button
