@@ -1,0 +1,11 @@
+{
+  "title": "grey-docs-template-dev",
+  "url": "grey-docs.grey.software",
+  "logo": {
+    "light": "/icon.png",
+    "dark": "/icon.png"
+  },
+  "github": "grey-software",
+  "gitlab": "grey-software",
+  "twitter": "grey_software"
+}
