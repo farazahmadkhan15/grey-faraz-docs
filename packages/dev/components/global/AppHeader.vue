@@ -66,8 +66,6 @@
             >
               <IconGithub class="w-5 h-5" />
             </a>
-            <IconGithub class="w-5 h-5" />
-            </a>
 
             <a
               v-if="settings.gitlab"
