@@ -1,6 +1,10 @@
+
 <!-- [![nuxt-content](https://content.nuxtjs.org/preview.png)](https://content.nuxtjs.org) -->
 
 # Grey Docs
+
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://gitlab.com/grey-software/templates/grey-docs)
+
 
 <!-- [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
