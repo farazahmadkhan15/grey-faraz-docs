@@ -1,9 +1,11 @@
 <template>
   <aside
     class="w-full lg:w-1/5 lg:block fixed lg:relative inset-0 mt-16 lg:mt-0 z-30 bg-white dark:bg-gray-900 lg:bg-transparent lg:dark:bg-transparent"
-    :class="{ 'block': menu, 'hidden': !menu }"
+    :class="{ block: menu, hidden: !menu }"
   >
-    <div class="lg:sticky lg:top-16 overflow-y-auto h-full lg:h-auto lg:max-h-(screen-16)">
+    <div
+      class="lg:sticky lg:top-16 overflow-y-auto h-full lg:h-auto lg:max-h-(screen-16)"
+    >
       <ul class="p-4 lg:py-8 lg:pl-0 lg:pr-8">
         <li v-if="!settings.algolia" class="mb-4 lg:hidden">
           <AppSearch />
@@ -13,16 +15,22 @@
           :key="category"
           class="mb-4"
           :class="{
-            'active': isCategoryActive(docs),
-            'lg:mb-0': index === Object.keys(categories).length - 1
+            active: isCategoryActive(docs),
+            'lg:mb-0': index === Object.keys(categories).length - 1,
           }"
         >
           <p
             v-if="category"
             class="mb-2 text-gray-500 uppercase tracking-wider font-bold text-sm lg:text-xs"
-          >{{ category }}</p>
+          >
+            {{ category }}
+          </p>
           <ul>
-            <li v-for="doc of docs" :key="doc.slug" class="text-gray-700 dark:text-gray-300">
+            <li
+              v-for="doc of docs"
+              :key="doc.slug"
+              class="text-gray-700 dark:text-gray-300"
+            >
               <NuxtLink
                 :to="localePath(doc.to)"
                 class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between"
@@ -40,7 +48,11 @@
           </ul>
         </li>
         <li class="lg:hidden space-x-2">
-          <p class="mb-2 text-gray-500 uppercase tracking-wider font-bold text-sm lg:text-xs">More</p>
+          <p
+            class="mb-2 text-gray-500 uppercase tracking-wider font-bold text-sm lg:text-xs"
+          >
+            More
+          </p>
           <div class="flex items-center space-x-4">
             <a
               v-if="settings.twitter"
@@ -54,8 +66,8 @@
               <IconTwitter class="w-5 h-5" />
             </a>
             <a
-              v-if="settings.github"
-              :href="githubUrls.repo"
+              v-if="settings.githubUrl"
+              :href="settings.githubUrl"
               target="_blank"
               rel="noopener noreferrer"
               title="Github"
@@ -64,24 +76,39 @@
             >
               <IconGithub class="w-5 h-5" />
             </a>
-
             <a
-              v-if="settings.github"
-              :href="`https://gitlab.com/${settings.gitlab}`"
+              v-if="settings.gitlabUrl"
+              :href="settings.gitlabUrl"
               target="_blank"
               rel="noopener noreferrer"
               title="Gitlab"
               name="Gitlab"
-              class="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark-hover:text-primary-500 ml-4"
-              :class="{
-                'hidden lg:block': settings.layout !== 'single'
-              }"
+              class="inline-flex text-gray-700 dark:text-gray-300 hover:text-primary-500"
             >
               <IconGitlab class="w-5 h-5" />
             </a>
-
-            <AppLangSwitcher />
-            <AppColorSwitcher />
+            <a
+              v-if="settings.discordUrl"
+              :href="settings.discordUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Discord"
+              name="Discord"
+              class="inline-flex text-gray-700 dark:text-gray-300 hover:text-primary-500"
+            >
+              <IconDiscord class="w-5 h-5" />
+            </a>
+            <a
+              v-if="settings.linkedinUrl"
+              :href="settings.linkedinUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Discord"
+              name="Discord"
+              class="inline-flex text-gray-700 dark:text-gray-300 hover:text-primary-500"
+            >
+              <IconLinkedin class="w-5 h-5" />
+            </a>
           </div>
         </li>
       </ul>
@@ -90,45 +117,42 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from "vuex";
 
 export default {
   computed: {
-    ...mapGetters([
-      'settings',
-      'githubUrls'
-    ]),
+    ...mapGetters(["settings", "githubUrls"]),
     menu: {
-      get () {
-        return this.$store.state.menu.open
+      get() {
+        return this.$store.state.menu.open;
       },
-      set (val) {
-        this.$store.commit('menu/toggle', val)
-      }
+      set(val) {
+        this.$store.commit("menu/toggle", val);
+      },
     },
-    categories () {
-      return this.$store.state.categories[this.$i18n.locale]
-    }
+    categories() {
+      return this.$store.state.categories[this.$i18n.locale];
+    },
   },
   methods: {
-    isCategoryActive (documents) {
-      return documents.some(document => document.to === this.$route.fullPath)
+    isCategoryActive(documents) {
+      return documents.some((document) => document.to === this.$route.fullPath);
     },
-    isDocumentNew (document) {
+    isDocumentNew(document) {
       if (process.server) {
-        return
+        return;
       }
       if (!document.version || document.version <= 0) {
-        return
+        return;
       }
 
-      const version = localStorage.getItem(`document-${document.slug}-version`)
+      const version = localStorage.getItem(`document-${document.slug}-version`);
       if (document.version > Number(version)) {
-        return true
+        return true;
       }
 
-      return false
-    }
-  }
-}
+      return false;
+    },
+  },
+};
 </script>

@@ -2,10 +2,12 @@
   "title": "grey-docs-template-dev",
   "url": "grey-docs.grey.software",
   "logo": {
-    "light": "/icon.png",
-    "dark": "/icon.png"
+    "light": "/icon-light.png",
+    "dark": "/icon-dark.png"
   },
-  "github": "grey-software",
-  "gitlab": "grey-software",
+  "githubUrl": "https://github.com/grey-software",
+  "gitlabUrl": "https://gitlab.com/grey-software",
+  "discordUrl": "http://community.grey.software",
+  "linkedinUrl": "https://www.linkedin.com/company/grey-software/",
   "twitter": "grey_software"
 }

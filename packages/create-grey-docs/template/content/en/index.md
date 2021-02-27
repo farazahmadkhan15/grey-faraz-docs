@@ -1,27 +1,26 @@
 ---
-title: Introduction
-description: ''
+title: Setup
+description: ""
 position: 1
-category: ''
-features:
-  - Feature 1
-  - Feature 2
-  - Feature 3
+category: Guide
 ---
 
-<img src="/preview.png" class="light-img" width="1280" height="640" alt=""/>
-<img src="/preview-dark.png" class="dark-img" width="1280" height="640" alt=""/>
+This package is built upon the Nuxt conttent docs theme.
 
-[Module]() for [NuxtJS](https://nuxtjs.org).
+Check the [Nuxt.js Content Docs theme documentation](https://nuxtjs.org/guides/configuration-glossary/configuration-modules) for insight on how the theme that powers this package works.
 
-<alert type="success">
+## Settings
 
-Your documentation has been created successfully!
+### Custom Links
 
-</alert>
+This theme provide support for the following links:
 
-## Features
+```
+  "githubUrl": "https://github.com/grey-software",
+  "gitlabUrl": "https://gitlab.com/grey-software",
+  "discordUrl": "http://community.grey.software",
+  "linkedinUrl": "https://www.linkedin.com/company/grey-software/",
+  "twitter": "grey_software"
+```
 
-<list :items="features"></list>
-
-<p class="flex items-center">Enjoy light and dark mode:&nbsp;<app-color-switcher class="inline-flex ml-2"></app-color-switcher></p>
+Head over to `content/setting.json` and set the links to your preffered endpoints.

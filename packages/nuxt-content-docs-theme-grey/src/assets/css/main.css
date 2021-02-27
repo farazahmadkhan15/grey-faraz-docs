@@ -11,6 +11,7 @@
   display: block;
 }
 
+
 .nuxt-content {
   @apply break-words;
 
@@ -87,3 +88,21 @@
     @apply bg-gray-800 static;
   }
 }
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.2s;
+  filter: inherit;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(10px);
+}
+
+.prose img {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+

@@ -12,31 +12,35 @@
             class="flex-shrink-0 flex-1 font-bold text-xl"
             :aria-label="`${settings.title} Logo`"
           >
-            <span v-if="!logo">{{ settings.title }}</span>
-
-            <img
-              v-if="logo"
-              :src="logo.light"
-              class="h-8 max-w-full light-img"
-              :alt="settings.title"
-            />
-            <img v-if="logo" :src="logo.dark" class="h-8 max-w-full dark-img" :alt="settings.title" />
+            <GreySoftwareLogoLight class="light-img" />
+            <GreySoftwareLogoDark class="dark-img" />
           </NuxtLink>
         </div>
-        <div v-if="settings.layout !== 'single'" class="flex-1 flex justify-start w-4/6">
-          <AppSearchAlgolia v-if="settings.algolia" :options="settings.algolia" :settings="settings" />
+        <div
+          v-if="settings.layout !== 'single'"
+          class="flex-1 flex justify-start w-4/6"
+        >
+          <AppSearchAlgolia
+            v-if="settings.algolia"
+            :options="settings.algolia"
+            :settings="settings"
+          />
           <AppSearch v-else class="hidden lg:block" />
         </div>
         <div
           class="lg:w-1/5 flex items-center pl-4 lg:pl-8"
-          :class="{ 'justify-between': lastRelease && settings.layout !== 'single', 'justify-end': !lastRelease || settings.layout === 'single' }"
+          :class="{
+            'justify-between': lastRelease && settings.layout !== 'single',
+            'justify-end': !lastRelease || settings.layout === 'single',
+          }"
         >
           <NuxtLink
             v-if="lastRelease"
             :to="localePath('/releases')"
             class="font-semibold leading-none text-gray-700 dark:text-gray-300 hover:text-primary-500 dark-hover:text-primary-500 text-base mr-4"
             exact-active-class="text-primary-500"
-          >{{ lastRelease.name }}</NuxtLink>
+            >{{ lastRelease.name }}</NuxtLink
+          >
           <div class="flex items-center">
             <a
               v-if="settings.twitter"
@@ -47,38 +51,66 @@
               name="Twitter"
               class="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark-hover:text-primary-500 ml-4"
               :class="{
-                'hidden lg:block': settings.layout !== 'single'
+                'hidden lg:block': settings.layout !== 'single',
               }"
             >
               <IconTwitter class="w-5 h-5" />
             </a>
             <a
-              v-if="settings.github"
-              :href="githubUrls.repo"
+              v-if="settings.githubUrl"
+              :href="settings.githubUrl"
               target="_blank"
               rel="noopener noreferrer"
               title="Github"
               name="Github"
               class="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark-hover:text-primary-500 ml-4"
               :class="{
-                'hidden lg:block': settings.layout !== 'single'
+                'hidden lg:block': settings.layout !== 'single',
               }"
             >
               <IconGithub class="w-5 h-5" />
             </a>
             <a
-              v-if="settings.github"
-              :href="`https://gitlab.com/${settings.gitlab}`"
+              v-if="settings.gitlabUrl"
+              :href="settings.gitlabUrl"
               target="_blank"
               rel="noopener noreferrer"
               title="Gitlab"
               name="Gitlab"
               class="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark-hover:text-primary-500 ml-4"
               :class="{
-                'hidden lg:block': settings.layout !== 'single'
+                'hidden lg:block': settings.layout !== 'single',
               }"
             >
               <IconGitlab class="w-5 h-5" />
+            </a>
+            <a
+              v-if="settings.discordUrl"
+              :href="settings.discordUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Discord"
+              name="Discord"
+              class="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark-hover:text-primary-500 ml-4"
+              :class="{
+                'hidden lg:block': settings.layout !== 'single',
+              }"
+            >
+              <IconDiscord class="w-5 h-5" />
+            </a>
+            <a
+              v-if="settings.linkedinUrl"
+              :href="settings.linkedinUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Discord"
+              name="Discord"
+              class="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark-hover:text-primary-500 ml-4"
+              :class="{
+                'hidden lg:block': settings.layout !== 'single',
+              }"
+            >
+              <IconLinkedin class="w-5 h-5" />
             </a>
 
             <button
@@ -98,60 +130,56 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from "vuex";
 
 export default {
-  data () {
+  data() {
     return {
-      scrolled: 0
-    }
+      scrolled: 0,
+    };
   },
   computed: {
-    ...mapGetters([
-      'settings',
-      'githubUrls',
-      'lastRelease'
-    ]),
+    ...mapGetters(["settings", "githubUrls", "lastRelease"]),
     menu: {
-      get () {
-        return this.$store.state.menu.open
+      get() {
+        return this.$store.state.menu.open;
       },
-      set (val) {
-        this.$store.commit('menu/toggle', val)
-      }
+      set(val) {
+        this.$store.commit("menu/toggle", val);
+      },
     },
-    logo () {
+    logo() {
       if (!this.settings.logo) {
-        return
+        return;
       }
 
-      if (typeof this.settings.logo === 'object') {
-        return this.settings.logo
+      if (typeof this.settings.logo === "object") {
+        return this.settings.logo;
       }
 
       return {
         light: this.settings.logo,
-        dark: this.settings.logo
-      }
-    }
+        dark: this.settings.logo,
+      };
+    },
   },
-  beforeMount () {
-    window.addEventListener('scroll', this.handleScroll)
+  beforeMount() {
+    window.addEventListener("scroll", this.handleScroll);
   },
-  beforeDestroy () {
-    window.removeEventListener('scroll', this.handleScroll)
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
-    handleScroll () {
-      this.scrolled = window.scrollY > 0
+    handleScroll() {
+      this.scrolled = window.scrollY > 0;
     },
-    scrollToTop () {
+    scrollToTop() {
       if (window.innerWidth >= 1280) {
-        return
+        return;
       }
-      window.scrollTo(0, 0)
+      window.scrollTo(0, 0);
     },
-    noop () { }
-  }
-}
+    noop() {},
+  },
+};
 </script>

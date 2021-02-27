@@ -11,31 +11,6 @@ module.exports = {
         name: 'title',
         message: 'Project title:',
         default: 'Nuxt Content'
-      },
-      {
-        name: 'url',
-        message: 'Documentation url:',
-        url: 'https://content.nuxtjs.org'
-      },
-      {
-        name: 'github',
-        message: 'GitHub repository (owner/name):',
-        default: 'nuxt/content'
-      },
-      {
-        name: 'twitter',
-        message: 'Twitter username (@username):',
-        default: '@nuxt_js'
-      },
-      {
-        name: 'pm',
-        message: 'Package manager:',
-        choices: [
-          { name: 'Yarn', value: 'yarn' },
-          { name: 'Npm', value: 'npm' }
-        ],
-        type: 'list',
-        default: 'yarn'
       }
     ]
   },
