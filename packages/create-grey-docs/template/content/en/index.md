@@ -5,7 +5,7 @@ position: 1
 category: Guide
 ---
 
-This package is built upon the Nuxt conttent docs theme.
+This package is built upon the Nuxt content docs theme.
 
 Check the [Nuxt.js Content Docs theme documentation](https://nuxtjs.org/guides/configuration-glossary/configuration-modules) for insight on how the theme that powers this package works.
 
