@@ -5,10 +5,7 @@
   "conventionalCommits": true,
   "packages": [
     "packages/create-grey-docs",
-    "packages/nuxt-content-docs-theme-grey",
-
-
-
+    "packages/nuxt-content-docs-theme-grey"
   ],
   "command": {
     "version": {
