@@ -18,12 +18,8 @@ cli
     const files = fs.existsSync(outDir) ? fs.readdirSync(outDir) : []
     // eslint-disable-next-line no-console
     console.log(chalk`{cyan create-grey-docs v${version}}`)
-    if (files.length) {
-      // eslint-disable-next-line no-console
-      return console.log(chalk.red(`Can't create ${outDir} because there's already a non-empty directory ${outDir} existing in path.`))
-    }
     // eslint-disable-next-line no-console
-    console.log(chalk`✨  Generating @nuxt/content documentation in {cyan ${outDir}}`)
+    console.log(chalk`✨  Generating grey-docs website in {cyan ${outDir}}`)
 
     const { verbose, answers } = cliOptions
     const logLevel = verbose ? 4 : 2

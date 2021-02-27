@@ -10,7 +10,7 @@ module.exports = {
       {
         name: 'title',
         message: 'Project title:',
-        default: 'Nuxt Content'
+        default: 'Documentation Website'
       }
     ]
   },
