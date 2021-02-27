@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.2](https://gitlab.com/grey-software/templates/grey-docs/compare/nuxt-content-docs-theme-grey@0.11.1...nuxt-content-docs-theme-grey@0.11.2) (2021-02-27)
+
+**Note:** Version bump only for package nuxt-content-docs-theme-grey
+
+
+
+
+
 ## [0.11.1](https://gitlab.com/grey-software/templates/grey-docs/compare/nuxt-content-docs-theme-grey@0.11.0-gs2.0...nuxt-content-docs-theme-grey@0.11.1) (2021-02-21)
 
 **Note:** Version bump only for package nuxt-content-docs-theme-grey
