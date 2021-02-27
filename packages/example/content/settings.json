@@ -1,0 +1,13 @@
+{
+  "title": "Documentation Website",
+  "logo": {
+    "light": "/icon-light.png",
+    "dark": "/icon-dark.png"
+  },
+  "githubUrl": "https://github.com/grey-software",
+  "gitlabUrl": "https://gitlab.com/grey-software",
+  "discordUrl": "http://community.grey.software",
+  "linkedinUrl": "https://www.linkedin.com/company/grey-software/",
+  "twitter": "grey_software"
+}
+

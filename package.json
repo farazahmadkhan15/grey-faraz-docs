@@ -12,13 +12,13 @@
     }
   ],
   "workspaces": [
-    "packages/*",
-    "docs"
-  ],
+    "packages/*"
+    ],
   "scripts": {
     "dev": "nuxt-ts example",
     "docs": "nuxt docs",
     "lint": "eslint --ext .js,.vue .",
+    "generate-example": "yarn --cwd packages/example generate",
     "release": "lerna publish",
     "test": "yarn lint && yarn test:packages",
     "test:watch": "jest packages --watch",
