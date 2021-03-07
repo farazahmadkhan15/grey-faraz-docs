@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.1 (2021-03-07)
+
+**Note:** Version bump only for package nuxt-content-theme-grey-docs
+
+
+
+
+
 ## [0.11.3](https://gitlab.com/grey-software/templates/grey-docs/compare/nuxt-content-docs-theme-grey@0.11.2...nuxt-content-docs-theme-grey@0.11.3) (2021-02-27)
 
 **Note:** Version bump only for package nuxt-content-docs-theme-grey
