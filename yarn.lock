@@ -12559,6 +12559,30 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
+nuxt-content-docs-theme-grey@^0.11.3:
+  version "0.11.3"
+  resolved "https://registry.yarnpkg.com/nuxt-content-docs-theme-grey/-/nuxt-content-docs-theme-grey-0.11.3.tgz#2c712e6f3ba81886281f5c8484762b394f0b11d6"
+  integrity sha512-uw5atOn20CWWXQCIPoMbVE7EzzGJlJpnC5EOrylysYyWHT1T6YAKFRi62powwBSVwRi67EEwhTSuj7Zs9wFeOQ==
+  dependencies:
+    "@docsearch/css" "^1.0.0-alpha.28"
+    "@docsearch/js" "^1.0.0-alpha.28"
+    "@nuxt/content" "^1.13.1"
+    "@nuxt/types" "^2.14.12"
+    "@nuxtjs/color-mode" "^2.0.3"
+    "@nuxtjs/google-fonts" "1.2.0"
+    "@nuxtjs/pwa" "^3.3.5"
+    "@nuxtjs/tailwindcss" "^3.4.2"
+    "@tailwindcss/typography" "0.2.0"
+    clipboard "^2.0.6"
+    defu "^3.2.2"
+    lodash.groupby "^4.6.0"
+    marked "^2.0.0"
+    nuxt-i18n "^6.20.0"
+    prism-themes "^1.5.0"
+    tailwind-css-variables "^2.0.3"
+    theme-colors "^0.0.5"
+    vue-scrollactive "^0.9.3"
+
 nuxt-i18n@^6.20.0:
   version "6.20.0"
   resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.20.0.tgz#09d7839c56b2f4eec6b37e55ee7be0b0d18563d4"

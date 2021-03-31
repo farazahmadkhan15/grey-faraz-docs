@@ -1,17 +1,21 @@
-# <%= name %>
+# Grey Docs Dev
+
+## Overview
+
+This package is used to develop the Grey Docs by allowing us to preview our changes to the nuxt-content-theme-grey-docs package. 
 
 ## Setup
 
 Install dependencies:
 
 ```bash
-<%= pmRun %> install
+npm run install
 ```
 
 ## Development
 
 ```bash
-<%= pmRun %> dev
+npm run dev
 ```
 
 ## Static Generation
@@ -19,9 +23,9 @@ Install dependencies:
 This will create the `dist/` directory for publishing to static hosting:
 
 ```bash
-<%= pmRun %> generate
+npm run generate
 ```
 
-To preview the static generated app, run `<%= pmRun %> start`
+To preview the static generated app, run `npm run start`
 
 For detailed explanation on how things work, checkout [nuxt/content](https://content.nuxtjs.org) and [@nuxt/content theme docs](https://content.nuxtjs.org/themes-docs).
