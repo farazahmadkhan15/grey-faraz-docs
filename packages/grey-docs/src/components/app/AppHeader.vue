@@ -1,6 +1,15 @@
 <template>
   <nav
-    class="fixed top-0 z-40 w-full border-b dark:border-gray-800 bg-white dark:bg-gray-900"
+    class="
+      fixed
+      top-0
+      z-40
+      w-full
+      border-b
+      dark:border-gray-800
+      bg-white
+      dark:bg-gray-900
+    "
     :class="{ 'shadow border-transparent': scrolled }"
     @click="scrollToTop"
   >
@@ -20,12 +29,7 @@
           v-if="settings.layout !== 'single'"
           class="flex-1 flex justify-start w-4/6"
         >
-          <AppSearchAlgolia
-            v-if="settings.algolia"
-            :options="settings.algolia"
-            :settings="settings"
-          />
-          <AppSearch v-else class="hidden lg:block" />
+          <AppSearch class="hidden lg:block" />
         </div>
         <div
           class="lg:w-1/5 flex items-center pl-4 lg:pl-8"
@@ -37,7 +41,16 @@
           <NuxtLink
             v-if="lastRelease"
             :to="localePath('/releases')"
-            class="font-semibold leading-none text-gray-700 dark:text-gray-300 hover:text-primary-500 dark-hover:text-primary-500 text-base mr-4"
+            class="
+              font-semibold
+              leading-none
+              text-gray-700
+              dark:text-gray-300
+              hover:text-primary-500
+              dark-hover:text-primary-500
+              text-base
+              mr-4
+            "
             exact-active-class="text-primary-500"
             >{{ lastRelease.name }}</NuxtLink
           >
@@ -49,7 +62,13 @@
               rel="noopener noreferrer"
               title="Twitter"
               name="Twitter"
-              class="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark-hover:text-primary-500 ml-4"
+              class="
+                text-gray-700
+                dark:text-gray-300
+                hover:text-primary-500
+                dark-hover:text-primary-500
+                ml-4
+              "
               :class="{
                 'hidden lg:block': settings.layout !== 'single',
               }"
@@ -63,7 +82,13 @@
               rel="noopener noreferrer"
               title="Github"
               name="Github"
-              class="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark-hover:text-primary-500 ml-4"
+              class="
+                text-gray-700
+                dark:text-gray-300
+                hover:text-primary-500
+                dark-hover:text-primary-500
+                ml-4
+              "
               :class="{
                 'hidden lg:block': settings.layout !== 'single',
               }"
@@ -77,7 +102,13 @@
               rel="noopener noreferrer"
               title="Gitlab"
               name="Gitlab"
-              class="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark-hover:text-primary-500 ml-4"
+              class="
+                text-gray-700
+                dark:text-gray-300
+                hover:text-primary-500
+                dark-hover:text-primary-500
+                ml-4
+              "
               :class="{
                 'hidden lg:block': settings.layout !== 'single',
               }"
@@ -91,7 +122,13 @@
               rel="noopener noreferrer"
               title="Discord"
               name="Discord"
-              class="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark-hover:text-primary-500 ml-4"
+              class="
+                text-gray-700
+                dark:text-gray-300
+                hover:text-primary-500
+                dark-hover:text-primary-500
+                ml-4
+              "
               :class="{
                 'hidden lg:block': settings.layout !== 'single',
               }"
@@ -105,7 +142,13 @@
               rel="noopener noreferrer"
               title="Discord"
               name="Discord"
-              class="text-gray-700 dark:text-gray-300 hover:text-primary-500 dark-hover:text-primary-500 ml-4"
+              class="
+                text-gray-700
+                dark:text-gray-300
+                hover:text-primary-500
+                dark-hover:text-primary-500
+                ml-4
+              "
               :class="{
                 'hidden lg:block': settings.layout !== 'single',
               }"
@@ -115,7 +158,15 @@
 
             <button
               v-if="settings.layout !== 'single'"
-              class="lg:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 focus:outline-none -mr-2"
+              class="
+                lg:hidden
+                p-2
+                rounded-md
+                text-gray-700
+                dark:text-gray-300
+                focus:outline-none
+                -mr-2
+              "
               aria-label="Menu"
               @click.stop="menu = !menu"
             >

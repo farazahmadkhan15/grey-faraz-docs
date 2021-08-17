@@ -7,8 +7,6 @@
   ],
   "main": "src/",
   "dependencies": {
-    "@docsearch/css": "^1.0.0-alpha.28",
-    "@docsearch/js": "^1.0.0-alpha.28",
     "@nuxt/content": "^1.13.1",
     "@nuxt/types": "^2.14.12",
     "@nuxtjs/color-mode": "^2.0.3",

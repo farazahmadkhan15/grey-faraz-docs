@@ -13,7 +13,7 @@
   ],
   "workspaces": [
     "packages/*"
-    ],
+  ],
   "scripts": {
     "dev": "nuxt-ts example",
     "docs": "nuxt docs",
@@ -43,9 +43,7 @@
     "jest": "^26.6.3",
     "lerna": "^3.22.1",
     "nuxt": "^2.14.12",
-    "puppeteer": "^7.0.4",
     "shiki": "^0.9.2",
-    "shiki-twoslash": "^1.0.0",
-    "tib": "^0.7.5"
+    "shiki-twoslash": "^1.0.0"
   }
 }
