@@ -1,6 +1,7 @@
-import theme from 'nuxt-content-docs-theme-grey'
+import remoteTheme from 'grey-docs'
+import localTheme from '../grey-docs'
 
-export default theme({
+const config = {
     components: true,
     content: {
         liveEdit: false
@@ -18,5 +19,16 @@ export default theme({
             },
         ]
     }
-})
+}
+
+let themedConfig
+
+if (process.env.NODE_ENV === 'production') {
+    themedConfig = localTheme(config)
+} else {
+    themedConfig = localTheme(config)
+}
+
+
+export default themedConfig
 

@@ -3,10 +3,7 @@
   "npmClient": "yarn",
   "useWorkspaces": true,
   "conventionalCommits": true,
-  "packages": [
-    "packages/create-grey-docs",
-    "packages/nuxt-content-docs-theme-grey"
-  ],
+  "packages": ["packages/create-grey-docs", "packages/grey-docs"],
   "command": {
     "version": {
       "private": false
