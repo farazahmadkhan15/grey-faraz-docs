@@ -24,7 +24,8 @@ module.exports = ({ nuxt }) => ({
         mono: ['DM Mono', ...defaultTheme.fontFamily.mono]
       },
       colors: {
-        primary: getColors(nuxt.options.docs.primaryColor)
+        primary: getColors(nuxt.options.docs.primaryColor),
+        black: getColors('#181818')
       },
       maxHeight: {
         '(screen-16)': 'calc(100vh - 4rem)'

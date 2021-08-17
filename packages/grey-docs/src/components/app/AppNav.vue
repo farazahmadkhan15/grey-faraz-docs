@@ -1,10 +1,31 @@
 <template>
   <aside
-    class="w-full lg:w-1/5 lg:block fixed lg:relative inset-0 mt-16 lg:mt-0 z-30 bg-white dark:bg-gray-900 lg:bg-transparent lg:dark:bg-transparent"
+    class="
+      w-full
+      lg:w-1/5
+      lg:block
+      fixed
+      lg:relative
+      inset-0
+      mt-16
+      lg:mt-0
+      z-30
+      bg-white
+      dark:bg-black-500
+      lg:bg-transparent
+      lg:dark:bg-transparent
+    "
     :class="{ block: menu, hidden: !menu }"
   >
     <div
-      class="lg:sticky lg:top-16 overflow-y-auto h-full lg:h-auto lg:max-h-(screen-16)"
+      class="
+        lg:sticky
+        lg:top-16
+        overflow-y-auto
+        h-full
+        lg:h-auto
+        lg:max-h-(screen-16)
+      "
     >
       <ul class="p-4 lg:py-8 lg:pl-0 lg:pr-8">
         <li v-if="!settings.algolia" class="mb-4 lg:hidden">
@@ -21,7 +42,15 @@
         >
           <p
             v-if="category"
-            class="mb-2 text-gray-500 uppercase tracking-wider font-bold text-sm lg:text-xs"
+            class="
+              mb-2
+              text-gray-500
+              uppercase
+              tracking-wider
+              font-bold
+              text-sm
+              lg:text-xs
+            "
           >
             {{ category }}
           </p>
@@ -33,14 +62,30 @@
             >
               <NuxtLink
                 :to="localePath(doc.to)"
-                class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between"
+                class="
+                  px-2
+                  rounded
+                  font-medium
+                  py-1
+                  hover:text-primary-500
+                  flex
+                  items-center
+                  justify-between
+                "
                 exact-active-class="text-primary-500 bg-primary-100 hover:text-primary-500 dark:bg-primary-900"
               >
                 {{ doc.menuTitle || doc.title }}
                 <client-only>
                   <span
                     v-if="isDocumentNew(doc)"
-                    class="animate-pulse rounded-full bg-primary-500 opacity-75 h-2 w-2"
+                    class="
+                      animate-pulse
+                      rounded-full
+                      bg-primary-500
+                      opacity-75
+                      h-2
+                      w-2
+                    "
                   />
                 </client-only>
               </NuxtLink>
@@ -49,7 +94,15 @@
         </li>
         <li class="lg:hidden space-x-2">
           <p
-            class="mb-2 text-gray-500 uppercase tracking-wider font-bold text-sm lg:text-xs"
+            class="
+              mb-2
+              text-gray-500
+              uppercase
+              tracking-wider
+              font-bold
+              text-sm
+              lg:text-xs
+            "
           >
             More
           </p>
@@ -61,7 +114,12 @@
               rel="noopener noreferrer"
               title="Twitter"
               name="Twitter"
-              class="inline-flex text-gray-700 dark:text-gray-300 hover:text-primary-500"
+              class="
+                inline-flex
+                text-gray-700
+                dark:text-gray-300
+                hover:text-primary-500
+              "
             >
               <IconTwitter class="w-5 h-5" />
             </a>
@@ -72,7 +130,12 @@
               rel="noopener noreferrer"
               title="Github"
               name="Github"
-              class="inline-flex text-gray-700 dark:text-gray-300 hover:text-primary-500"
+              class="
+                inline-flex
+                text-gray-700
+                dark:text-gray-300
+                hover:text-primary-500
+              "
             >
               <IconGithub class="w-5 h-5" />
             </a>
@@ -83,7 +146,12 @@
               rel="noopener noreferrer"
               title="Gitlab"
               name="Gitlab"
-              class="inline-flex text-gray-700 dark:text-gray-300 hover:text-primary-500"
+              class="
+                inline-flex
+                text-gray-700
+                dark:text-gray-300
+                hover:text-primary-500
+              "
             >
               <IconGitlab class="w-5 h-5" />
             </a>
@@ -94,7 +162,12 @@
               rel="noopener noreferrer"
               title="Discord"
               name="Discord"
-              class="inline-flex text-gray-700 dark:text-gray-300 hover:text-primary-500"
+              class="
+                inline-flex
+                text-gray-700
+                dark:text-gray-300
+                hover:text-primary-500
+              "
             >
               <IconDiscord class="w-5 h-5" />
             </a>
@@ -105,7 +178,12 @@
               rel="noopener noreferrer"
               title="Discord"
               name="Discord"
-              class="inline-flex text-gray-700 dark:text-gray-300 hover:text-primary-500"
+              class="
+                inline-flex
+                text-gray-700
+                dark:text-gray-300
+                hover:text-primary-500
+              "
             >
               <IconLinkedin class="w-5 h-5" />
             </a>

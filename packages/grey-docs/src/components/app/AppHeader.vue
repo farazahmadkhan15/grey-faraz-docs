@@ -8,7 +8,7 @@
       border-b
       dark:border-gray-800
       bg-white
-      dark:bg-gray-900
+      dark:bg-black-500
     "
     :class="{ 'shadow border-transparent': scrolled }"
     @click="scrollToTop"
