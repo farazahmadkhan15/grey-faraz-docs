@@ -156,6 +156,11 @@
               <IconLinkedin class="w-5 h-5" />
             </a>
 
+            <div class="flex items-center mx-4">
+              <AppLangSwitcher />
+              <AppColorSwitcher />
+            </div>
+
             <button
               v-if="settings.layout !== 'single'"
               class="

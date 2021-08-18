@@ -11,34 +11,99 @@
       z-20
     "
   >
-    <div
-      class="
-        h-full
-        w-full
-        container
-        mx-auto
-        px-4
-        lg:px-8
-        flex
-        items-center
-        justify-between
-      "
-    >
-      <a
-        href="https://grey.software"
-        target="_blank"
-        rel="noopener"
-        class="flex items-center"
-      >
-        <span class="prose text-gray-700 dark:text-gray-300"
-          >Built with Love, Joy, and Hope</span
-        >
-      </a>
-      <div class="flex items-center space-x-4">
-        <AppLangSwitcher />
-        <AppColorSwitcher />
+    <section class="py-4">
+      <div class="container px-4 mx-auto">
+        <div class="flex flex-wrap justify-between items-center -mx-4">
+          <div class="w-full lg:w-1/2 px-4 mb-4 lg:mb-0">
+            <NuxtLink
+              to="/"
+              class="flex-shrink-0 flex-1 font-bold text-xl"
+              :aria-label="`Grey Software's Logo`"
+            >
+              <GreySoftwareLogoLight class="light-img" />
+              <GreySoftwareLogoDark class="dark-img" />
+            </NuxtLink>
+            <p class="hidden lg:block mt-3 text-sm text-gray-400">
+              Made with Love, Joy, and Hope!
+            </p>
+          </div>
+          <div
+            class="
+              w-full
+              lg:w-1/2
+              px-4
+              flex flex-wrap
+              items-center
+              lg:justify-end
+            "
+          >
+            <ul
+              class="
+                w-full
+                lg:w-auto
+                inline-flex
+                flex-wrap
+                mb-4
+                lg:mb-0
+                lg:mr-12
+              "
+            >
+              <li class="mr-6 mb-2 md:mb-0">
+                <a
+                  class="
+                    text-sm text-gray-900
+                    dark:text-gray-300
+                    hover:text-gray-700
+                  "
+                  href="https://learn.grey.software/"
+                  target="_blank"
+                  >Learn</a
+                >
+              </li>
+              <li class="mr-6 mb-2 md:mb-0">
+                <a
+                  class="
+                    text-sm text-gray-900
+                    dark:text-gray-300
+                    hover:text-gray-700
+                  "
+                  href="https://resources.grey.software/"
+                  target="_blank"
+                  >Resources</a
+                >
+              </li>
+              <li class="mr-6 mb-2 md:mb-0">
+                <a
+                  class="
+                    text-sm text-gray-900
+                    dark:text-gray-300
+                    hover:text-gray-700
+                  "
+                  href="https://onboarding.grey.software/"
+                  target="_blank"
+                  >Onboarding</a
+                >
+              </li>
+              <li class="mb-2 md:mb-0">
+                <a
+                  class="
+                    text-sm text-gray-900
+                    dark:text-gray-300
+                    hover:text-gray-700
+                  "
+                  href="https://org.grey.software/"
+                  target="_blank"
+                  >Organization</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="mt-6 lg:hidden text-sm text-gray-400">
+          Made with Love, Joy, and Hope
+        </p>
       </div>
-    </div>
+    </section>
   </footer>
 </template>
 
