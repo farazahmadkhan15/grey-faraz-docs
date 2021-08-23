@@ -1,6 +1,6 @@
 ---
 title: Components
-description: ""
+description: "Discover the components you can use to bring your documentation to life with the grey-docs theme!"
 position: 2
 category: Guide
 ---

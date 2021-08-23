@@ -1,7 +1,7 @@
 {
   "name": "grey-docs",
   "private": true,
-  "description": "Grey Software's Docs theme",
+  "description": "Grey Software's Documentation theme!",
   "license": "MIT",
   "contributors": [
     {
@@ -15,16 +15,11 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "nuxt-ts example",
-    "docs": "nuxt docs",
+    "dev": "nuxt packages/example",
     "lint": "eslint --ext .js,.vue .",
     "generate-example": "yarn --cwd packages/example generate",
     "release": "lerna publish",
-    "test": "yarn lint && yarn test:packages",
-    "test:watch": "jest packages --watch",
-    "test:packages": "jest packages -i",
-    "test:packages:content": "jest packages/content -i",
-    "test:packages:create-nuxt-content-docs": "jest packages/create-nuxt-content-docs"
+    "test": "yarn lint && yarn test:packages"
   },
   "devDependencies": {
     "@babel/core": "^7.12.13",

@@ -1,46 +1,43 @@
-
-<!-- [![nuxt-content](https://content.nuxtjs.org/preview.png)](https://content.nuxtjs.org) -->
-
 # Grey Docs
 
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://gitlab.com/grey-software/templates/grey-docs)
+The Grey Docs framework allows you to build beautiful documentation websites with Markdown and Vue components!
 
+Grey Docs powers many of [Grey Software's Ecosystem Websites](https://org.grey.software/ecosystem/)!
 
-<!-- [![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![Github Actions CI][github-actions-ci-src]][github-actions-ci-href]
-[![Codecov][codecov-src]][codecov-href]
-[![License][license-src]][license-href]
-[![lerna][lerna-src]][lerna-href] -->
+This framework is built upon the [Nuxt content docs theme](https://content.nuxtjs.org/themes/docs/), and we are grateful to the Nuxt team for open-sourcing their documentation framework!
 
-> @nuxt/content lets you write in a content/ directory, acting as Git-based Headless CMS
+## Get Started
 
-<!-- - [🎲 &nbsp;Play on CodeSandbox](https://codesandbox.io/s/nuxtcontent-demo-l164h?)
-- [🎬 &nbsp;Demonstration videos](https://content.nuxtjs.org/#videos)
-- [✨ &nbsp;Release Notes](https://github.com/nuxt/content/releases)
-- [📖 &nbsp;Read the documentation](https://content.nuxtjs.org) -->
+### Create
 
-<!-- ## Features
+To get started, use our create-grey-docs package!
 
-- Blazing fast hot reload in development
-- Vue components in Markdown
-- Full-text search
-- Support static site generation with `nuxt generate`
-- Powerful QueryBuilder API (MongoDB like)
-- Syntax highlighting to code blocks in markdown files using PrismJS.
-- Table of contents generation
-- Handles Markdown, CSV, YAML, JSON(5), XML
-- Extend with hooks -->
+```
+npx create-grey-docs
+```
 
-<!-- [📖 Read the documentation](https://content.nuxtjs.org) -->
+or
 
-## Development
+```
+yarn create grey-docs
+```
 
-1. Clone this repository
-2. Install dependencies using `yarn install` or `npm install`
-3. Enter the dev packages `cd packages/dev`
-3. Start developing by running `yarn dev` or `npm run dev`
+### Develop
 
-## License
+```
+cd your-project-name
+npm run dev
+```
 
-[MIT License](./LICENSE)
+or
+
+```
+cd your-project-name
+yarn dev
+```
+
+## Learn More
+
+- [Writing markdown content](https://content.nuxtjs.org/writing#markdown)
+- [Default Nuxt components](https://content.nuxtjs.org/themes/docs#components)
+- [Grey Software's Added Components](https://grey-docs.grey.software/components)

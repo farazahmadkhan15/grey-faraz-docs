@@ -1,6 +1,6 @@
 {
   "name": "<%= name %>",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -9,7 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "grey-docs": "^0.2.2",
+    "grey-docs": "0.2.3",
     "nuxt": "^2.15.2"
   }
 }

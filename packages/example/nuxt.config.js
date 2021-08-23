@@ -24,7 +24,7 @@ const config = {
 let themedConfig
 
 if (process.env.NODE_ENV === 'production') {
-    themedConfig = localTheme(config)
+    themedConfig = remoteTheme(config)
 } else {
     themedConfig = localTheme(config)
 }

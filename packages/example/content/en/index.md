@@ -1,26 +1,48 @@
 ---
-title: Setup
-description: ""
+title: Home
+description: "Learn about the grey-docs framework!"
 position: 1
 category: Guide
 ---
 
-This package is built upon the Nuxt content docs theme.
+The Grey Docs framework allows you to build beautiful documentation websites with Markdown and Vue components!
 
-Check the [Nuxt.js Content Docs theme documentation](https://nuxtjs.org/guides/configuration-glossary/configuration-modules) for insight on how the theme that powers this package works.
+Grey Docs powers many of [Grey Software's Ecosystem Websites](https://org.grey.software/ecosystem/)!
 
-## Settings
+This framework is built upon the [Nuxt content docs theme](https://content.nuxtjs.org/themes/docs/), and we are grateful to the Nuxt team for open-sourcing their documentation framework!
 
-### Custom Links
+## Get Started
 
-This theme provide support for the following links:
+### Create
+
+To get started, use our create-grey-docs package!
 
 ```
-  "githubUrl": "https://github.com/grey-software",
-  "gitlabUrl": "https://gitlab.com/grey-software",
-  "discordUrl": "http://community.grey.software",
-  "linkedinUrl": "https://www.linkedin.com/company/grey-software/",
-  "twitter": "grey_software"
+npx create-grey-docs
 ```
 
-Head over to `content/setting.json` and set the links to your preffered endpoints.
+or
+
+```
+yarn create grey-docs
+```
+
+### Develop
+
+```
+cd your-project-name
+npm run dev
+```
+
+or
+
+```
+cd your-project-name
+yarn dev
+```
+
+## Learn More
+
+- [Writing markdown content](https://content.nuxtjs.org/writing#markdown)
+- [Default Nuxt components](https://content.nuxtjs.org/themes/docs#components)
+- [Grey Software's Added Components](https://grey-docs.grey.software/components)
