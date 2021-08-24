@@ -1,7 +1,7 @@
 <template>
-  <div class="w-4/5 relative flex flex-col justify-between">
+  <div class="w-full relative flex flex-col justify-between pr-4">
     <div
-      class="w-4/5 relative"
+      class="w-full relative"
       @keydown.down="increment"
       @keydown.up="decrement"
       @keydown.enter="go"
