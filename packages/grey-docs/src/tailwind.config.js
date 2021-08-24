@@ -40,6 +40,9 @@ module.exports = ({ nuxt }) => ({
     typography: theme => ({
       default: {
         css: {
+          p: {
+            fontSize: '1rem'
+          },
           a: {
             textDecoration: "none",
             color: theme("colors.primary.400"),
@@ -52,7 +55,7 @@ module.exports = ({ nuxt }) => ({
           h1: {
             color: "#475569",
             fontWeight: "bold",
-            fontSize: "64px",
+            fontSize: "56px",
             lineHeight: "95%",
             letterSpacing: "-0.03em",
             marginBottom: "0.25em"
@@ -60,7 +63,7 @@ module.exports = ({ nuxt }) => ({
           h2: {
             color: "#475569",
             fontWeight: "bold",
-            fontSize: "48px",
+            fontSize: "42px",
             lineHeight: "95%",
             marginTop: "0.75em",
             marginBottom: "0.75em",
@@ -71,19 +74,25 @@ module.exports = ({ nuxt }) => ({
             fontWeight: "600",
             fontSize: "36px",
             lineHeight: "95%",
-            borderBottomWidth: "0px"
+            borderBottomWidth: "0px",
+            marginTop: "0.75em",
+            marginBottom: "0.75em",
           },
           h4: {
             color: "#475569",
             fontWeight: "600",
             fontSize: "24px",
-            lineHeight: "95%"
+            lineHeight: "95%",
+            marginTop: "0.75em",
+            marginBottom: "0.75em",
           },
           h5: {
             color: "#475569",
             fontWeight: "600",
             fontSize: "20px",
-            lineHeight: "95%"
+            lineHeight: "95%",
+            marginTop: "0.75em",
+            marginBottom: "0.75em",
           },
           blockquote: {
             fontWeight: "400",
