@@ -59,10 +59,7 @@ function themeModule() {
       name: 'index'
     })
   })
-  // Override editor style on dev mode
-  if (options.dev) {
-    options.css.push(path.resolve(__dirname, 'assets/css/main.dev.css'))
-  }
+
   // Configure `tailwind.config.js` path
   options.tailwindcss.configPath = options.tailwindcss.configPath || path.resolve(options.rootDir, 'tailwind.config.js')
   options.tailwindcss.cssPath = options.tailwindcss.cssPath || path.resolve(options.rootDir, options.dir.assets, 'css', 'tailwind.css')
@@ -174,7 +171,9 @@ const defaultConfig = docsOptions => ({
       'DM+Mono': true
     }
   },
-  tailwindcss: {}
+  tailwindcss: {
+
+  }
 })
 
 export default (userConfig) => {

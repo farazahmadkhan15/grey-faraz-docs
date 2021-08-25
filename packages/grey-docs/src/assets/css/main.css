@@ -31,16 +31,13 @@
       @apply ml-5;
 
       &::before {
-        content: "🔗";
-        @apply text-primary-500 font-normal text-xl leading-8 -ml-6 pr-2 absolute opacity-100;
+        content: "#";
+        @apply text-primary-500 font-normal text-xl leading-8 -ml-5 pr-2 absolute opacity-100;
       }
 
-      @screen lg {
-        @apply ml-0;
-
-        &::before {
-          @apply opacity-0;
-        }
+      @apply lg:ml-0;
+      &::before {
+        @apply opacity-0;
       }
     }
     &:hover {

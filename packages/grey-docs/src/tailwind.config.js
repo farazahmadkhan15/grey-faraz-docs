@@ -11,12 +11,7 @@ const selectorParser = require("postcss-selector-parser");
 const { getColors } = require("theme-colors");
 
 module.exports = ({ nuxt }) => ({
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-    defaultLineHeights: true,
-    standardFontWeights: true
-  },
+  mode: 'jit',
   theme: {
     extend: {
       screens: {
@@ -34,6 +29,160 @@ module.exports = ({ nuxt }) => ({
         primary: getColors(nuxt.options.docs.primaryColor),
         black: getColors("#181818")
       },
+      typography: theme => ({
+        DEFAULT: {
+          css: {
+            p: {
+              fontSize: '1rem'
+            },
+            a: {
+              textDecoration: "none",
+              color: theme("colors.primary.400"),
+              fontWeight: "500",
+              transition: "all 0.2s ease-out",
+              "&:hover": {
+                color: theme("colors.primary.700")
+              }
+            },
+            h1: {
+              color: "#475569",
+              fontWeight: "bold",
+              fontSize: "56px",
+              lineHeight: "95%",
+              letterSpacing: "-0.03em",
+              marginBottom: "0.25em"
+            },
+            h2: {
+              color: "#475569",
+              fontWeight: "bold",
+              fontSize: "42px",
+              lineHeight: "95%",
+              marginTop: "0.75em",
+              marginBottom: "0.75em",
+              borderBottomWidth: "0px"
+            },
+            h3: {
+              color: "#475569",
+              fontWeight: "bold",
+              fontSize: "36px",
+              lineHeight: "95%",
+              borderBottomWidth: "0px",
+              marginTop: "0.75em",
+              marginBottom: "0.75em",
+            },
+            h4: {
+              color: "#475569",
+              fontWeight: "600",
+              fontSize: "24px",
+              lineHeight: "95%",
+              marginTop: "0.75em",
+              marginBottom: "0.75em",
+            },
+            h5: {
+              color: "#475569",
+              fontWeight: "600",
+              fontSize: "20px",
+              lineHeight: "95%",
+              marginTop: "0.75em",
+              marginBottom: "0.75em",
+            },
+            blockquote: {
+              fontWeight: "400",
+              color: theme("colors.gray.600"),
+              fontStyle: "normal",
+              quotes: '"\\201C""\\201D""\\2018""\\2019"'
+            },
+            "blockquote p:first-of-type::before": {
+              content: ""
+            },
+            "blockquote p:last-of-type::after": {
+              content: ""
+            },
+            code: {
+              fontWeight: "400",
+              backgroundColor: theme("colors.gray.100"),
+              padding: theme("padding.1"),
+              borderWidth: 1,
+              borderColor: theme("colors.gray.200"),
+              borderRadius: theme("borderRadius.default")
+            },
+            "code::before": {
+              content: ""
+            },
+            "code::after": {
+              content: ""
+            },
+            "h3 code": {
+              fontWeight: "600"
+            },
+            "pre code": {
+              fontFamily: "DM Mono"
+            },
+            "a code": {
+              color: theme("colors.primary.500")
+            }
+          }
+        },
+        dark: {
+          css: {
+            color: theme("colors.gray.300"),
+            '[class~="lead"]': {
+              color: theme("colors.gray.300")
+            },
+            a: {
+              color: theme("colors.primary.500")
+            },
+            strong: {
+              color: theme("colors.gray.100")
+            },
+            "ol > li::before": {
+              color: theme("colors.gray.400")
+            },
+            "ul > li::before": {
+              backgroundColor: theme("colors.gray.600")
+            },
+            hr: {
+              borderColor: theme("colors.gray.700")
+            },
+            blockquote: {
+              color: theme("colors.gray.400"),
+              borderLeftColor: theme("colors.gray.700")
+            },
+            h1: {
+              color: theme("colors.gray.100")
+            },
+            h2: {
+              color: theme("colors.gray.100"),
+              borderBottomColor: theme("colors.gray.800")
+            },
+            h3: {
+              color: theme("colors.gray.100"),
+              borderBottomColor: theme("colors.gray.800")
+            },
+            h4: {
+              color: theme("colors.gray.100")
+            },
+            "figure figcaption": {
+              color: theme("colors.gray.400")
+            },
+            code: {
+              color: theme("colors.gray.100"),
+              backgroundColor: theme("colors.gray.800"),
+              borderWidth: 0
+            },
+            "a code": {
+              color: theme("colors.primary.500")
+            },
+            thead: {
+              color: theme("colors.gray.100"),
+              borderBottomColor: theme("colors.gray.600")
+            },
+            "tbody tr": {
+              borderBottomColor: theme("colors.gray.700")
+            }
+          }
+        }
+      }),
       maxHeight: {
         "(screen-16)": "calc(100vh - 4rem)"
       },
@@ -44,160 +193,6 @@ module.exports = ({ nuxt }) => ({
         padding: "padding"
       }
     },
-    typography: theme => ({
-      default: {
-        css: {
-          p: {
-            fontSize: '1rem'
-          },
-          a: {
-            textDecoration: "none",
-            color: theme("colors.primary.400"),
-            fontWeight: "500",
-            transition: "all 0.2s ease-out",
-            "&:hover": {
-              color: theme("colors.primary.700")
-            }
-          },
-          h1: {
-            color: "#475569",
-            fontWeight: "bold",
-            fontSize: "56px",
-            lineHeight: "95%",
-            letterSpacing: "-0.03em",
-            marginBottom: "0.25em"
-          },
-          h2: {
-            color: "#475569",
-            fontWeight: "bold",
-            fontSize: "42px",
-            lineHeight: "95%",
-            marginTop: "0.75em",
-            marginBottom: "0.75em",
-            borderBottomWidth: "0px"
-          },
-          h3: {
-            color: "#475569",
-            fontWeight: "600",
-            fontSize: "36px",
-            lineHeight: "95%",
-            borderBottomWidth: "0px",
-            marginTop: "0.75em",
-            marginBottom: "0.75em",
-          },
-          h4: {
-            color: "#475569",
-            fontWeight: "600",
-            fontSize: "24px",
-            lineHeight: "95%",
-            marginTop: "0.75em",
-            marginBottom: "0.75em",
-          },
-          h5: {
-            color: "#475569",
-            fontWeight: "600",
-            fontSize: "20px",
-            lineHeight: "95%",
-            marginTop: "0.75em",
-            marginBottom: "0.75em",
-          },
-          blockquote: {
-            fontWeight: "400",
-            color: theme("colors.gray.600"),
-            fontStyle: "normal",
-            quotes: '"\\201C""\\201D""\\2018""\\2019"'
-          },
-          "blockquote p:first-of-type::before": {
-            content: ""
-          },
-          "blockquote p:last-of-type::after": {
-            content: ""
-          },
-          code: {
-            fontWeight: "400",
-            backgroundColor: theme("colors.gray.100"),
-            padding: theme("padding.1"),
-            borderWidth: 1,
-            borderColor: theme("colors.gray.200"),
-            borderRadius: theme("borderRadius.default")
-          },
-          "code::before": {
-            content: ""
-          },
-          "code::after": {
-            content: ""
-          },
-          "h3 code": {
-            fontWeight: "600"
-          },
-          "pre code": {
-            fontFamily: "DM Mono"
-          },
-          "a code": {
-            color: theme("colors.primary.500")
-          }
-        }
-      },
-      dark: {
-        css: {
-          color: theme("colors.gray.300"),
-          '[class~="lead"]': {
-            color: theme("colors.gray.300")
-          },
-          a: {
-            color: theme("colors.primary.500")
-          },
-          strong: {
-            color: theme("colors.gray.100")
-          },
-          "ol > li::before": {
-            color: theme("colors.gray.400")
-          },
-          "ul > li::before": {
-            backgroundColor: theme("colors.gray.600")
-          },
-          hr: {
-            borderColor: theme("colors.gray.700")
-          },
-          blockquote: {
-            color: theme("colors.gray.400"),
-            borderLeftColor: theme("colors.gray.700")
-          },
-          h1: {
-            color: theme("colors.gray.100")
-          },
-          h2: {
-            color: theme("colors.gray.100"),
-            borderBottomColor: theme("colors.gray.800")
-          },
-          h3: {
-            color: theme("colors.gray.100"),
-            borderBottomColor: theme("colors.gray.800")
-          },
-          h4: {
-            color: theme("colors.gray.100")
-          },
-          "figure figcaption": {
-            color: theme("colors.gray.400")
-          },
-          code: {
-            color: theme("colors.gray.100"),
-            backgroundColor: theme("colors.gray.800"),
-            borderWidth: 0
-          },
-          "a code": {
-            color: theme("colors.primary.500")
-          },
-          thead: {
-            color: theme("colors.gray.100"),
-            borderBottomColor: theme("colors.gray.600")
-          },
-          "tbody tr": {
-            borderBottomColor: theme("colors.gray.700")
-          }
-        }
-      }
-    })
   },
   variants: {
     margin: ["responsive", "last"],
@@ -281,7 +276,7 @@ module.exports = ({ nuxt }) => ({
       "nuxt.config.js"
     ],
     options: {
-      whitelist: ["dark-mode"]
+      safelist: ["dark-mode"]
     }
   }
 });
