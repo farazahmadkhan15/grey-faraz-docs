@@ -11,11 +11,11 @@
   display: block;
 }
 
-
 .nuxt-content {
   @apply break-words;
 
-  & h2, & h3 {
+  & h2,
+  & h3 {
     /* Fix anchor scrollTo */
     &::before {
       display: block;
@@ -31,16 +31,13 @@
       @apply ml-5;
 
       &::before {
-        content: "#";
-        @apply text-primary-500 font-normal text-xl leading-8 -ml-5 pr-2 absolute opacity-100;
+        content: "🔗";
+        @apply text-primary-500 font-normal text-xl leading-8 -ml-6 pr-2 absolute opacity-100;
       }
 
-      @screen lg {
-        @apply ml-0;
-
-        &::before {
-          @apply opacity-0;
-        }
+      @apply lg:ml-0;
+      &::before {
+        @apply opacity-0;
       }
     }
     &:hover {
@@ -105,4 +102,3 @@
   margin-top: 0;
   margin-bottom: 0;
 }
-

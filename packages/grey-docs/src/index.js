@@ -6,7 +6,7 @@ import tailwindConfig from './tailwind.config'
 
 const fs = gracefulFs.promises
 
-function themeModule () {
+function themeModule() {
   // wait for nuxt options to be normalized
   const { nuxt } = this
   const { options, hook } = this.nuxt
@@ -59,10 +59,7 @@ function themeModule () {
       name: 'index'
     })
   })
-  // Override editor style on dev mode
-  if (options.dev) {
-    options.css.push(path.resolve(__dirname, 'assets/css/main.dev.css'))
-  }
+
   // Configure `tailwind.config.js` path
   options.tailwindcss.configPath = options.tailwindcss.configPath || path.resolve(options.rootDir, 'tailwind.config.js')
   options.tailwindcss.cssPath = options.tailwindcss.cssPath || path.resolve(options.rootDir, options.dir.assets, 'css', 'tailwind.css')
@@ -102,6 +99,13 @@ const defaultConfig = docsOptions => ({
     '@/plugins/vue-scrollactive',
     '@/plugins/menu.client'
   ],
+  babel: {
+    plugins: [
+      ['@babel/plugin-proposal-class-properties', { loose: true }],
+      ['@babel/plugin-proposal-private-methods', { loose: true }],
+      ['@babel/plugin-proposal-private-property-in-object', { loose: true }]
+    ]
+  },
   buildModules: [
     themeModule,
     '@nuxtjs/tailwindcss',
@@ -163,11 +167,13 @@ const defaultConfig = docsOptions => ({
   },
   googleFonts: {
     families: {
-      'DM+Sans': true,
+      'Inter': true,
       'DM+Mono': true
     }
   },
-  tailwindcss: {}
+  tailwindcss: {
+
+  }
 })
 
 export default (userConfig) => {

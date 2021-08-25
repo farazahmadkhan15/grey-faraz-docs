@@ -1,19 +1,10 @@
 <template>
   <nav
-    class="
-      fixed
-      top-0
-      z-40
-      w-full
-      border-b
-      dark:border-gray-800
-      bg-white
-      dark:bg-black-500
-    "
+    class="fixed top-0 z-40 w-full bg-white dark:bg-black-500 pt-4"
     :class="{ 'shadow border-transparent': scrolled }"
     @click="scrollToTop"
   >
-    <div class="container mx-auto flex-1 px-4 lg:px-8">
+    <div class="container mx-auto flex-1 px-2">
       <div class="flex items-center justify-between h-16">
         <div class="lg:w-1/5 flex items-center pr-4" @click.stop="noop">
           <NuxtLink
