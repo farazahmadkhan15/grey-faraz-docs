@@ -1,6 +1,6 @@
 {
   "name": "grey-docs-example",
-  "version": "0.2.4",
+  "version": "0.3.1",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -9,7 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "grey-docs": "0.2.4",
+    "grey-docs": "0.3.1",
     "nuxt": "^2.15.8"
   }
 }
