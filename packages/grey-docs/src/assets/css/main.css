@@ -37,7 +37,7 @@
 
       @apply lg:ml-0;
       &::before {
-        @apply opacity-0;
+        @apply lg:opacity-0;
       }
     }
     &:hover {

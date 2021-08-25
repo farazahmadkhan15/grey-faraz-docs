@@ -1,9 +1,9 @@
 <template>
-  <footer class="h-16 relative w-full bg-white dark:bg-black-500 z-20">
+  <footer class="h-16 relative w-screen bg-white dark:bg-black-500 z-20">
     <section class="py-4">
-      <div class="container px-2 mx-auto">
-        <div class="flex flex-wrap justify-between items-center -mx-4">
-          <div class="w-full lg:w-1/2 px-4 mb-4 lg:mb-0">
+      <div class="w-screen md:container px-4 mx-auto">
+        <div class="flex flex-wrap justify-between items-center">
+          <div class="w-screen lg:w-1/2 px-4 mb-4 lg:mb-0">
             <NuxtLink
               to="/"
               class="flex-shrink-0 flex-1 font-bold text-xl"
