@@ -13,13 +13,13 @@ This framework is built upon the [Nuxt content docs theme](https://content.nuxtj
 To get started, use our create-grey-docs package!
 
 ```
-npx create-grey-docs
+npx create-grey-docs your-project-name
 ```
 
 or
 
 ```
-yarn create grey-docs
+yarn create grey-docs your-project-name
 ```
 
 ### Develop
