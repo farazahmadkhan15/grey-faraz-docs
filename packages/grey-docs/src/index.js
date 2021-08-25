@@ -6,7 +6,7 @@ import tailwindConfig from './tailwind.config'
 
 const fs = gracefulFs.promises
 
-function themeModule () {
+function themeModule() {
   // wait for nuxt options to be normalized
   const { nuxt } = this
   const { options, hook } = this.nuxt
@@ -163,7 +163,7 @@ const defaultConfig = docsOptions => ({
   },
   googleFonts: {
     families: {
-      'DM+Sans': true,
+      'Inter': true,
       'DM+Mono': true
     }
   },
