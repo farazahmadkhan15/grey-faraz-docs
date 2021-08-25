@@ -23,7 +23,7 @@ const config = {
 
 let themedConfig
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production' && process.env.BRANCH === 'master') {
     themedConfig = remoteTheme(config)
 } else {
     themedConfig = localTheme(config)
