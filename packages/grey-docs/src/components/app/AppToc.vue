@@ -11,7 +11,7 @@
       "
     >
       <nav
-        class="py-4 lg:py-8"
+        class="py-4 lg:py-8 lg:text-right"
         :class="{
           'lg:pl-8 lg:pr-2': settings.layout !== 'single',
           'lg:px-8': settings.layout === 'single',

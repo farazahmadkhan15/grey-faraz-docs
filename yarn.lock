@@ -9567,28 +9567,6 @@ gray-matter@^4.0.2:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
-grey-docs@0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/grey-docs/-/grey-docs-0.2.3.tgz#054074e06f46cecdc49534fe06e8548ca8edd68c"
-  integrity sha512-Rk6cLVWLNezabj+T7s5s5nXk/6TP8YCqzsNeYH4KdbZFolG10B0z45rJHxHMdF8D5V7di8WYjlXpdWjs58BDIQ==
-  dependencies:
-    "@nuxt/content" "^1.13.1"
-    "@nuxt/types" "^2.14.12"
-    "@nuxtjs/color-mode" "^2.0.3"
-    "@nuxtjs/google-fonts" "1.2.0"
-    "@nuxtjs/pwa" "^3.3.5"
-    "@nuxtjs/tailwindcss" "^3.4.2"
-    "@tailwindcss/typography" "0.2.0"
-    clipboard "^2.0.6"
-    defu "^3.2.2"
-    lodash.groupby "^4.6.0"
-    marked "^2.0.0"
-    nuxt-i18n "^6.20.0"
-    prism-themes "^1.5.0"
-    tailwind-css-variables "^2.0.3"
-    theme-colors "^0.0.5"
-    vue-scrollactive "^0.9.3"
-
 growly@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
@@ -13097,7 +13075,7 @@ nuxt@^2.14.12:
     "@nuxt/telemetry" "^1.3.0"
     "@nuxt/webpack" "2.14.12"
 
-nuxt@^2.15.2:
+nuxt@^2.15.8:
   version "2.15.8"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-2.15.8.tgz#946cba46bdaaf0e3918aa27fd9ea0fed8ed303b0"
   integrity sha512-ceK3qLg/Baj7J8mK9bIxqw9AavrF+LXqwYEreBdY/a4Sj8YV4mIvhqea/6E7VTCNNGvKT2sJ/TTJjtfQ597lTA==

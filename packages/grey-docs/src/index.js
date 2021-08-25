@@ -102,6 +102,13 @@ const defaultConfig = docsOptions => ({
     '@/plugins/vue-scrollactive',
     '@/plugins/menu.client'
   ],
+  babel: {
+    plugins: [
+      ['@babel/plugin-proposal-class-properties', { loose: true }],
+      ['@babel/plugin-proposal-private-methods', { loose: true }],
+      ['@babel/plugin-proposal-private-property-in-object', { loose: true }]
+    ]
+  },
   buildModules: [
     themeModule,
     '@nuxtjs/tailwindcss',
