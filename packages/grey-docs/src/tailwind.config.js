@@ -19,6 +19,13 @@ module.exports = ({ nuxt }) => ({
   },
   theme: {
     extend: {
+      screens: {
+        'xs': { max: '599px' },
+        'sm': { min: '600px' },
+        'md': { min: '900px' },
+        'lg': { min: '1200px' },
+        'xl': { min: '1800px' },
+      },
       fontFamily: {
         sans: ['DM Sans', ...defaultTheme.fontFamily.sans],
         mono: ['DM Mono', ...defaultTheme.fontFamily.mono]

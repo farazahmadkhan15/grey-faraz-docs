@@ -12,7 +12,7 @@
     "
   >
     <section class="py-4">
-      <div class="container px-4 mx-auto">
+      <div class="container px-2 mx-auto">
         <div class="flex flex-wrap justify-between items-center -mx-4">
           <div class="w-full lg:w-1/2 px-4 mb-4 lg:mb-0">
             <NuxtLink
