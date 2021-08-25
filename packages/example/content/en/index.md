@@ -5,8 +5,6 @@ position: 1
 category: Guide
 ---
 
-# Grey Docs
-
 The Grey Docs framework allows you to build beautiful documentation websites with Markdown and Vue components!
 
 Grey Docs powers many of [Grey Software's Ecosystem Websites](https://org.grey.software/ecosystem/)!
