@@ -1,16 +1,5 @@
 <template>
-  <footer
-    class="
-      h-16
-      relative
-      w-full
-      border-t
-      dark:border-gray-800
-      bg-white
-      dark:bg-black-500
-      z-20
-    "
-  >
+  <footer class="h-16 relative w-full bg-white dark:bg-black-500 z-20">
     <section class="py-4">
       <div class="container px-2 mx-auto">
         <div class="flex flex-wrap justify-between items-center -mx-4">
