@@ -3,7 +3,7 @@
     <section class="py-4">
       <div class="w-screen md:container px-4 mx-auto">
         <div class="flex flex-wrap justify-between items-center">
-          <div class="w-screen lg:w-1/2 px-4 mb-4 lg:mb-0">
+          <div class="px-4 mb-4 lg:mb-0">
             <NuxtLink
               to="/"
               class="flex-shrink-0 flex-1 font-bold text-xl"
@@ -12,30 +12,10 @@
               <GreySoftwareLogoLight class="light-img" />
               <GreySoftwareLogoDark class="dark-img" />
             </NuxtLink>
-            <p class="hidden lg:block mt-3 text-sm text-gray-400">
-              Made with Love, Joy, and Hope!
-            </p>
           </div>
-          <div
-            class="
-              w-full
-              lg:w-1/2
-              px-4
-              flex flex-wrap
-              items-center
-              lg:justify-end
-            "
-          >
+          <div class="px-4 flex flex-wrap items-center lg:justify-center">
             <ul
-              class="
-                w-full
-                lg:w-auto
-                inline-flex
-                flex-wrap
-                mb-4
-                lg:mb-0
-                lg:mr-12
-              "
+              class="justify-center inline-flex flex-wrap mb-4 lg:mb-0 lg:mr-12"
             >
               <li class="mr-6 mb-2 md:mb-0">
                 <a
@@ -87,8 +67,13 @@
               </li>
             </ul>
           </div>
+          <div class="flex justify-end">
+            <p class="hidden lg:block text-sm text-gray-400">
+              Made with Love, Joy, and Hope!
+            </p>
+          </div>
         </div>
-        <p class="mt-6 lg:hidden text-sm text-gray-400">
+        <p class="mt-2 lg:hidden text-sm text-gray-400">
           Made with Love, Joy, and Hope
         </p>
       </div>
