@@ -27,7 +27,8 @@ module.exports = ({ nuxt }) => ({
       },
       colors: {
         primary: getColors(nuxt.options.docs.primaryColor),
-        black: getColors("#181818")
+        black: getColors("#181818"),
+        droping: getColors('#2D2D2D')
       },
       typography: theme => ({
         DEFAULT: {
@@ -197,7 +198,7 @@ module.exports = ({ nuxt }) => ({
   variants: {
     margin: ["responsive", "last"],
     padding: ["responsive", "hover"],
-    backgroundColor: ["responsive", "hover", "focus", "dark", "dark-focus"],
+    backgroundColor: ["responsive", "hover", "focus", "dark", "dark-focus, dark-hover"],
     textColor: [
       "responsive",
       "hover",
