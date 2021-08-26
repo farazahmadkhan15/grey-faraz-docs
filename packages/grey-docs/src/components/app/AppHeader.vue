@@ -28,7 +28,7 @@
         </div>
         <div
           v-if="settings.layout !== 'single'"
-          class="flex-1 flex justify-start p w-6/12"
+          class="flex-1 flex justify-start mr-20 w-6/12"
         >
           <AppSearch class="hidden lg:block" />
         </div>
@@ -41,8 +41,9 @@
         >
           <div class="flex items-center">
             <!-- Generating nav link from props -->
-            <div v-for="(Navitem, index) in Navitems" :key="index" class="dropdown inline-block relative">
-              <div class="flex items-center mr-10">
+            <div v-for="(Navitem, index) in Navitems" :key="index" class="cursor-pointer dropdown inline-block relative">
+              
+              <div class="flex items-center mr-8 ">
                 <p
                   class=" dark:text-gray-300
                           hover:text-primary-300
@@ -74,7 +75,7 @@
                 bg-white
                 dropdown-menu
                 hidden
-                dark:bg-gray-900
+                dark:bg-black-500
                 z-40
                 right-2 drop z-40 rounded-md shadow-lg  ring-1 ring-black ring-opacity-5"
                 role="menu"
@@ -111,11 +112,22 @@
                 </div>
               </div>
             </div>
+            
+
+             <div class="flex items-center mr-8 ">
+                <p
+                  class=" dark:text-gray-300
+                          hover:text-primary-300
+                          dark-hover:text-primary-500
+                        ">
+                  Credits
+                </p>
+              </div>
 
             <button
-              class="bg-transparent mr-3 px-8 dark:text-white text-black py-1 border border-gray-600 dark:border-white rounded "
+              class="bg-transparent mr-3 px-8 dark:text-white text-black py-2 border border-gray-600 dark:border-white rounded btn-custom "
             >
-              Social
+              Support us
             </button>
             <div class="flex items-center ml-2 -mr-20">
               <AppLangSwitcher />
@@ -138,17 +150,13 @@ export default {
     return {
       Navitems: [
         {
-          name: "Organization",
+          name: "Ecosystem",
           link: "/"
         },
 
         {
-          name: "Ecosystem",
+          name: "Socials",
           link: "/"
-        },
-        {
-          name: "supporters",
-          link: "/supporters"
         }
       ],
       Dropitems: [
@@ -247,22 +255,17 @@ export default {
 .bg-drop {
   background: #2d2d2d !important;
 }
-
+ 
+.btn-custom {
+   white-space: nowrap !important;
+} 
 /* logic for dropdown */
 .dropdown:hover .dropdown-menu {
   display: block !important;
 }
 
 .drop {
-  margin-top: 6px !important;
+  margin-top: 1px !important;
   width: 400px !important;
-}
-
-.dd {
-  outline-color: tomato !important;
-}
-
-.dd:focus {
-  outline: 0 !important;
 }
 </style>
