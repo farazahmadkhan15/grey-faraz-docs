@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full relative flex flex-col justify-between pr-12">
+  <div class="w-6/12 relative flex flex-col justify-between ml-10">
     <div
       class="w-full relative"
       @keydown.down="increment"
