@@ -1,7 +1,6 @@
 <template>
   <aside
     class="
-      w-full
       lg:w-1/5
       lg:block
       fixed
@@ -14,6 +13,8 @@
       dark:bg-black-500
       lg:bg-transparent
       lg:dark:bg-transparent
+      container
+      mx-auto
     "
     :class="{ block: menu, hidden: !menu }"
   >

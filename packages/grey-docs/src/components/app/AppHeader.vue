@@ -32,7 +32,7 @@
           <AppSearch class="hidden lg:block" />
         </div>
         <div
-          class="lg:w-1/5 flex items-center pl-4 lg:pl-8"
+          class="hidden lg:w-1/5 lg:flex items-center pl-4 lg:pl-8"
           :class="{
             'justify-between': lastRelease && settings.layout !== 'single',
             'justify-end': !lastRelease || settings.layout === 'single',
@@ -167,6 +167,23 @@
             </div>
           </div>
         </div>
+        <button
+          v-if="settings.layout !== 'single'"
+          class="
+            lg:hidden
+            p-2
+            rounded-md
+            text-gray-700
+            dark:text-gray-300
+            focus:outline-none
+            -mr-2
+          "
+          aria-label="Menu"
+          @click.stop="menu = !menu"
+        >
+          <IconX v-if="menu" class="w-5 h-5" />
+          <IconMenu v-else class="w-5 h-5" />
+        </button>
       </div>
     </div>
   </nav>
