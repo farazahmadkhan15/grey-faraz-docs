@@ -9,12 +9,11 @@
       dark:border-gray-800
       bg-white
       dark:bg-black-500
-      
     "
     :class="{ 'shadow border-transparent': scrolled }"
     @click="scrollToTop"
   >
-    <div class="container mx-auto flex-1 px-4 lg:px-8">
+    <div class="container mx-auto px-4">
       <div class="flex items-center justify-between h-16">
         <div class="lg:w-1/5 flex items-center pr-4" @click.stop="noop">
           <NuxtLink
@@ -36,48 +35,59 @@
           class="lg:w-1/5 flex items-center pl-4 lg:pl-8"
           :class="{
             'justify-between': lastRelease && settings.layout !== 'single',
-            'justify-end': !lastRelease || settings.layout === 'single'
+            'justify-end': !lastRelease || settings.layout === 'single',
           }"
         >
           <div class="flex items-center">
             <!-- Generating nav link from props -->
-            <div v-for="(Navitem, index) in Navitems" :key="index" class="cursor-pointer dropdown inline-block relative">
-              
-              <div class="flex items-center mr-8 ">
+            <div
+              v-for="(Navitem, index) in Navitems"
+              :key="index"
+              class="cursor-pointer dropdown inline-block relative"
+            >
+              <div class="flex items-center mr-8">
                 <p
-                  class=" dark:text-gray-300
-                          hover:text-primary-300
-                          dark-hover:text-primary-500
-                        "
+                  class="
+                    dark:text-gray-300
+                    hover:text-primary-300
+                    dark-hover:text-primary-500
+                  "
                   id="menu-button"
                   aria-expanded="true"
                   aria-haspopup="true"
                 >
                   {{ Navitem.name }}
                 </p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
               </div>
 
               <!-- below code is for dropdown with custom class dropdown-menu -->
               <div
-                class="absolute
-                bg-white
-                dropdown-menu
-                hidden
-                dark:bg-black-500
-                z-40
-                right-2 drop z-40 rounded-md shadow-lg  ring-1 ring-black ring-opacity-5"
+                class="
+                  absolute
+                  bg-white
+                  dropdown-menu
+                  hidden
+                  dark:bg-black-500
+                  z-40
+                  right-2
+                  drop
+                  z-40
+                  rounded-md
+                  shadow-lg
+                  ring-1 ring-black ring-opacity-5
+                "
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="menu-button"
@@ -85,13 +95,23 @@
               >
                 <div>
                   <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                  <div v-for="(Dropitem, index) in Dropitems" :key="index" class="dd">
+                  <div
+                    v-for="(Dropitem, index) in Dropitems"
+                    :key="index"
+                    class="dd"
+                  >
                     <div
-                      class="flex justify-around items-center  hover:bg-gray-100 dark-hover:bg-gray-700 "
+                      class="
+                        flex
+                        justify-around
+                        items-center
+                        hover:bg-gray-100
+                        dark-hover:bg-gray-700
+                      "
                     >
                       <nuxt-link
                         to="/apps"
-                        class="dark:text-white  text-gray-700 block py-4 text-sm"
+                        class="dark:text-white text-gray-700 block py-4 text-sm"
                       >
                         {{ Dropitem.name }}</nuxt-link
                       >
@@ -112,24 +132,36 @@
                 </div>
               </div>
             </div>
-            
 
-             <div class="flex items-center mr-8 ">
-                <p
-                  class=" dark:text-gray-300
-                          hover:text-primary-300
-                          dark-hover:text-primary-500
-                        ">
-                  Credits
-                </p>
-              </div>
+            <div class="flex items-center mr-8">
+              <p
+                class="
+                  dark:text-gray-300
+                  hover:text-primary-300
+                  dark-hover:text-primary-500
+                "
+              >
+                Credits
+              </p>
+            </div>
 
             <button
-              class="bg-transparent mr-3 px-8 dark:text-white text-black py-2 border border-gray-600 dark:border-white rounded btn-custom "
+              class="
+                bg-transparent
+                mr-3
+                px-8
+                dark:text-white
+                text-black
+                py-2
+                border border-gray-600
+                dark:border-white
+                rounded
+                btn-custom
+              "
             >
               Support us
             </button>
-            <div class="flex items-center ml-2 -mr-20">
+            <div class="flex items-center ml-2">
               <AppLangSwitcher />
               <AppColorSwitcher />
             </div>
@@ -144,47 +176,45 @@
 import { mapGetters } from "vuex";
 
 export default {
-  name: "Frame2",
-
   data() {
     return {
       Navitems: [
         {
           name: "Ecosystem",
-          link: "/"
+          link: "/",
         },
 
         {
           name: "Socials",
-          link: "/"
-        }
+          link: "/",
+        },
       ],
       Dropitems: [
         {
           name: "Follow on twitter",
-          link: "/"
+          link: "/",
         },
 
         {
           name: "Visit GitHub",
-          link: "/"
+          link: "/",
         },
         {
           name: "Check GitLab",
-          link: "/supporters"
+          link: "/supporters",
         },
         {
           name: "Join our Discord",
-          link: "/supporters"
+          link: "/supporters",
         },
         {
-          name: "Follow on LinkedIN",
-          link: "/supporters"
-        }
+          name: "Follow on LinkedIn",
+          link: "/supporters",
+        },
       ],
       scrolled: 0,
       isOpen: false,
-      isOpenDrop: false
+      isOpenDrop: false,
     };
   },
   computed: {
@@ -195,7 +225,7 @@ export default {
       },
       set(val) {
         this.$store.commit("menu/toggle", val);
-      }
+      },
     },
     logo() {
       if (!this.settings.logo) {
@@ -208,12 +238,12 @@ export default {
 
       return {
         light: this.settings.logo,
-        dark: this.settings.logo
+        dark: this.settings.logo,
       };
     },
     getHover() {
       this.isOpenDrop = !this.isOpenDrop;
-    }
+    },
   },
   beforeMount() {
     window.addEventListener("scroll", this.handleScroll);
@@ -239,7 +269,7 @@ export default {
       if (!this.$el.contains(e.target)) {
         this.isOpenDrop = false;
       }
-    }
+    },
   },
 
   mounted() {
@@ -247,7 +277,7 @@ export default {
   },
   beforeDestroy() {
     document.removeEventListener("click", this.close);
-  }
+  },
 };
 </script>
 
@@ -255,10 +285,10 @@ export default {
 .bg-drop {
   background: #2d2d2d !important;
 }
- 
+
 .btn-custom {
-   white-space: nowrap !important;
-} 
+  white-space: nowrap !important;
+}
 /* logic for dropdown */
 .dropdown:hover .dropdown-menu {
   display: block !important;
