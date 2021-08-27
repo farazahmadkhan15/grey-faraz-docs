@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -8,9 +8,20 @@
       background-color: #2D2D2D !important;
     }
   }
+} */
+
+
+/* logic for dropdown */
+.dropdown:hover .dropdown-menu {
+  display: block !important;
 }
 
 
+.btn-custom {
+  border: 1px solid #ededed;
+  box-sizing: border-box;
+  white-space: nowrap !important;
+}
 .dark-mode .light-img {
   display: none;
 }

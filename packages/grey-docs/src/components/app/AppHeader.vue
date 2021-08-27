@@ -5,7 +5,7 @@
       top-0
       z-40
       w-full
-       py-3
+      py-3
       border-b
       dark:border-gray-800
       bg-white
@@ -42,7 +42,7 @@
           <div class="flex items-center">
             <!-- Generating nav link from props -->
             <div
-              v-for="(Navitem, index) in Navitems"
+              v-for="(navItem, index) in navItems"
               :key="index"
               class="cursor-pointer dropdown inline-block relative"
             >
@@ -57,7 +57,7 @@
                   aria-expanded="true"
                   aria-haspopup="true"
                 >
-                  {{ Navitem.name }}
+                  {{ navItem.name }}
                 </p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -80,12 +80,13 @@
                   bg-white
                   dropdown-menu
                   hidden
-                  dark:customColor
+                  dark:bg-altblack-500
                   z-40
                   right-2
-                  drop
-                  rounded-md
+                  w-96
+                  rounded-lg
                   shadow-lg
+                  border border-black-900
                 "
                 role="menu"
                 aria-orientation="vertical"
@@ -95,24 +96,37 @@
                 <div>
                   <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
                   <div
-                    v-for="(Dropitem, index) in Dropitems"
+                    v-for="(dropItem, index) in dropItems"
                     :key="index"
-                    class="dd"
+                    class="flex justify-center flex-col items-center px-9"
                   >
                     <div
                       class="
                         flex
-                        justify-around
+                        justify-between
                         items-center
+                        w-80
+                        h-14
+                        hover:w-96
+                        hover:px-8
+                        border-r-0
+                        border-l-0
+                        border-t-0
                         hover:bg-gray-100
+                        hover:border-black-900
+                        hover:border-r
+                        hover:border-l
+                        hover:border-b-0
+                        dark-hover:border-r-0
+                        dark-hover:border-l-0
                         dark-hover:bg-black-600
-                      "
+                        border dark:border-altblacks-900"
                     >
                       <nuxt-link
                         to="/apps"
                         class="dark:text-white text-gray-700 block py-4 text-sm"
                       >
-                        {{ Dropitem.name }}</nuxt-link
+                        {{ dropItem.name }}</nuxt-link
                       >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +197,7 @@ import { mapGetters } from "vuex";
 export default {
   data() {
     return {
-      Navitems: [
+      navItems: [
         {
           name: "Ecosystem",
           link: "/"
@@ -194,32 +208,31 @@ export default {
           link: "/"
         }
       ],
-      Dropitems: [
+
+      dropItems: [
         {
           name: "Follow on twitter",
           link: "/"
         },
-
         {
           name: "Visit GitHub",
           link: "/"
         },
         {
           name: "Check GitLab",
-          link: "/supporters"
+          link: "/"
         },
         {
           name: "Join our Discord",
-          link: "/supporters"
+          link: "/"
         },
         {
           name: "Follow on LinkedIn",
-          link: "/supporters"
+          link: "/"
         }
       ],
       scrolled: 0,
-      isOpen: false,
-      isOpenDrop: false
+      isOpen: false
     };
   },
   computed: {
@@ -245,11 +258,9 @@ export default {
         light: this.settings.logo,
         dark: this.settings.logo
       };
-    },
-    getHover() {
-      this.isOpenDrop = !this.isOpenDrop;
     }
   },
+
   beforeMount() {
     window.addEventListener("scroll", this.handleScroll);
   },
@@ -266,44 +277,7 @@ export default {
       }
       window.scrollTo(0, 0);
     },
-    noop() {},
-    toggleDrop() {
-      this.isOpenDrop = !this.isOpenDrop;
-    },
-    close(e) {
-      if (!this.$el.contains(e.target)) {
-        this.isOpenDrop = false;
-      }
-    }
-  },
-
-  mounted() {
-    document.addEventListener("click", this.close);
-  },
-  beforeDestroy() {
-    document.removeEventListener("click", this.close);
+    noop() {}
   }
 };
 </script>
-
-<style scoped>
-.bg-drop {
-  background: #2d2d2d !important;
-}
-
-/* logic for dropdown */
-.dropdown:hover .dropdown-menu {
-  display: block !important;
-}
-
-.drop {
-  margin-top: 1px !important;
-  width: 400px !important;
-}
-
-.btn-custom {
-  border: 1px solid #ededed;
-  box-sizing: border-box;
-  white-space: nowrap !important;
-}
-</style>
