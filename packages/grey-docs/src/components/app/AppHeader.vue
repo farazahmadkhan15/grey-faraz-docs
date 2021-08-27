@@ -5,6 +5,7 @@
       top-0
       z-40
       w-full
+       py-3
       border-b
       dark:border-gray-800
       bg-white
@@ -83,7 +84,6 @@
                   z-40
                   right-2
                   drop
-                  z-40
                   rounded-md
                   shadow-lg
                   ring-1 ring-black ring-opacity-5
@@ -146,22 +146,11 @@
             </div>
 
             <button
-              class="
-                bg-transparent
-                mr-3
-                px-8
-                dark:text-white
-                text-black
-                py-2
-                border border-gray-600
-                dark:border-white
-                rounded
-                btn-custom
-              "
+              class=" dark:border-white w-28 h-11 ml-6 rounded-md btn-custom "
             >
               Support us
             </button>
-            <div class="flex items-center ml-2">
+            <div class="flex items-center ml-12 ">
               <AppLangSwitcher />
               <AppColorSwitcher />
             </div>
@@ -303,9 +292,6 @@ export default {
   background: #2d2d2d !important;
 }
 
-.btn-custom {
-  white-space: nowrap !important;
-}
 /* logic for dropdown */
 .dropdown:hover .dropdown-menu {
   display: block !important;
@@ -315,4 +301,12 @@ export default {
   margin-top: 1px !important;
   width: 400px !important;
 }
+ 
+.btn-custom {
+border: 1px solid #EDEDED;
+box-sizing: border-box;
+white-space: nowrap !important;
+} 
+
+
 </style>
