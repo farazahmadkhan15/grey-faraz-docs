@@ -84,7 +84,7 @@
                   z-40
                   right-2
                   w-96
-                  rounded-lg
+                  rounded
                   shadow-lg
                   border border-black-900
                 "
@@ -93,14 +93,14 @@
                 aria-labelledby="menu-button"
                 tabindex="-1"
               >
-                <div>
-                  <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+
+                <div v-if="navItem.name == 'Socials'">
                   <div
-                    v-for="(dropItem, index) in dropItems"
+                    v-for="(socialLink, index) in socialLinks"
                     :key="index"
                     class="flex justify-center flex-col items-center px-9"
                   >
-                    <div
+                    <a
                       class="
                         flex
                         justify-between
@@ -121,12 +121,13 @@
                         dark-hover:border-l-0
                         dark-hover:bg-black-600
                         border dark:border-altblacks-900"
+                        :href="socialLink.link"
                     >
-                      <nuxt-link
-                        to="/apps"
+                      <div
+                       
                         class="dark:text-white text-gray-700 block py-4 text-sm"
                       >
-                        {{ dropItem.name }}</nuxt-link
+                        {{ socialLink.name }}</div
                       >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +141,58 @@
                           clip-rule="evenodd"
                         />
                       </svg>
-                    </div>
+                    </a>
+                    <!-- </div> -->
+                  </div>
+                </div>
+
+                <div v-else>
+                  <div
+                    v-for="(ecosystemLink, index) in ecosystemLinks"
+                    :key="index"
+                    class="flex justify-center flex-col items-center px-9"
+                  >
+                    <a
+                      class="
+                        flex
+                        justify-between
+                        items-center
+                        w-80
+                        h-14
+                        hover:w-96
+                        hover:px-8
+                        border-r-0
+                        border-l-0
+                        border-t-0
+                        hover:bg-gray-100
+                        hover:border-black-900
+                        hover:border-r
+                        hover:border-l
+                        hover:border-b-0
+                        dark-hover:border-r-0
+                        dark-hover:border-l-0
+                        dark-hover:bg-black-600
+                        border dark:border-altblacks-900"
+                        :href="ecosystemLink.link"
+                     >
+                      <div
+                        class="dark:text-white text-gray-700 block py-4 text-sm"
+                      >
+                        {{ ecosystemLink.name }}
+                      </div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 text-gray-700 dark:text-white"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -200,35 +252,51 @@ export default {
       navItems: [
         {
           name: "Ecosystem",
-          link: "/"
         },
-
         {
           name: "Socials",
-          link: "/"
         }
       ],
 
-      dropItems: [
+      socialLinks: [
         {
           name: "Follow on twitter",
-          link: "/"
+          link: "/https://twitter.com/grey_software"
         },
         {
           name: "Visit GitHub",
-          link: "/"
+          link: "/https://github.com/grey-software"
         },
         {
           name: "Check GitLab",
-          link: "/"
+          link: "/https://gitlab.com/grey-software"
         },
         {
           name: "Join our Discord",
-          link: "/"
+          link: "/https://discord.com/invite/2CGKQEe9xw"
         },
         {
           name: "Follow on LinkedIn",
-          link: "/"
+          link: "/https://www.linkedin.com/company/grey-software/"
+        }
+      ],
+
+      ecosystemLinks: [
+        {
+          name: "Learn",
+          link: "/https://learn.grey.software/"
+        },
+        {
+          name: "Resources",
+          link: "/https://resources.grey.software/"
+        },
+        {
+          name: "Onboarding",
+          link: "/https://onboarding.grey.software/"
+        },
+        {
+          name: "Organization",
+          link: "/https://org.grey.software/"
         }
       ],
       scrolled: 0,

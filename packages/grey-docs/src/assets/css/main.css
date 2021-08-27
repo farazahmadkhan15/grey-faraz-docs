@@ -9,7 +9,9 @@
     }
   }
 } */
-
+* {
+  box-sizing: border-box;
+}
 
 /* logic for dropdown */
 .dropdown:hover .dropdown-menu {
