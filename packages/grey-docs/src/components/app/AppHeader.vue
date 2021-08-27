@@ -93,7 +93,6 @@
                 aria-labelledby="menu-button"
                 tabindex="-1"
               >
-
                 <div v-if="navItem.name == 'Socials'">
                   <div
                     v-for="(socialLink, index) in socialLinks"
@@ -121,14 +120,14 @@
                         dark-hover:border-l-0
                         dark-hover:bg-black-600
                         border dark:border-altblacks-900"
-                        :href="socialLink.link"
+                      :href="socialLink.link"
+                      target="blank"
                     >
                       <div
-                       
                         class="dark:text-white text-gray-700 block py-4 text-sm"
                       >
-                        {{ socialLink.name }}</div
-                      >
+                        {{ socialLink.name }}
+                      </div>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="h-5 w-5 text-gray-700 dark:text-white"
@@ -142,7 +141,6 @@
                         />
                       </svg>
                     </a>
-                    <!-- </div> -->
                   </div>
                 </div>
 
@@ -173,8 +171,9 @@
                         dark-hover:border-l-0
                         dark-hover:bg-black-600
                         border dark:border-altblacks-900"
-                        :href="ecosystemLink.link"
-                     >
+                      :href="ecosystemLink.link"
+                      target="blank"
+                    >
                       <div
                         class="dark:text-white text-gray-700 block py-4 text-sm"
                       >
@@ -251,52 +250,52 @@ export default {
     return {
       navItems: [
         {
-          name: "Ecosystem",
+          name: "Ecosystem"
         },
         {
-          name: "Socials",
+          name: "Socials"
         }
       ],
 
       socialLinks: [
         {
           name: "Follow on twitter",
-          link: "/https://twitter.com/grey_software"
+          link: "https://twitter.com/grey_software"
         },
         {
           name: "Visit GitHub",
-          link: "/https://github.com/grey-software"
+          link: "https://github.com/grey-software"
         },
         {
           name: "Check GitLab",
-          link: "/https://gitlab.com/grey-software"
+          link: "https://gitlab.com/grey-software"
         },
         {
           name: "Join our Discord",
-          link: "/https://discord.com/invite/2CGKQEe9xw"
+          link: "https://discord.com/invite/2CGKQEe9xw"
         },
         {
           name: "Follow on LinkedIn",
-          link: "/https://www.linkedin.com/company/grey-software/"
+          link: "https://www.linkedin.com/company/grey-software/"
         }
       ],
 
       ecosystemLinks: [
         {
           name: "Learn",
-          link: "/https://learn.grey.software/"
+          link: "https://learn.grey.software/"
         },
         {
           name: "Resources",
-          link: "/https://resources.grey.software/"
+          link: "https://resources.grey.software/"
         },
         {
           name: "Onboarding",
-          link: "/https://onboarding.grey.software/"
+          link: "https://onboarding.grey.software/"
         },
         {
           name: "Organization",
-          link: "/https://org.grey.software/"
+          link: "https://org.grey.software/"
         }
       ],
       scrolled: 0,
