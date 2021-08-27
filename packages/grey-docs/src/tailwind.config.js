@@ -29,7 +29,8 @@ module.exports = ({ nuxt }) => ({
       colors: {
         primary: getColors(nuxt.options.docs.primaryColor),
         black: getColors("#181818"),
-        
+        altblack: getColors("#2d2d2d")
+
       },
       typography: theme => ({
         DEFAULT: {
@@ -128,7 +129,7 @@ module.exports = ({ nuxt }) => ({
         dark: {
           css: {
             color: theme("colors.gray.300"),
-            
+
             '[class~="lead"]': {
               color: theme("colors.gray.300")
             },
