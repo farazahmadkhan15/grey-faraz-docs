@@ -12,6 +12,7 @@ const { getColors } = require("theme-colors");
 
 module.exports = ({ nuxt }) => ({
   mode: 'jit',
+  darkMode: 'media',
   theme: {
     extend: {
       screens: {
@@ -27,7 +28,7 @@ module.exports = ({ nuxt }) => ({
       },
       colors: {
         primary: getColors(nuxt.options.docs.primaryColor),
-        black: getColors("#2D2D2D"),
+        black: getColors("#181818"),
         
       },
       typography: theme => ({
@@ -199,7 +200,7 @@ module.exports = ({ nuxt }) => ({
   variants: {
     margin: ["responsive", "last"],
     padding: ["responsive", "hover"],
-    backgroundColor: ["responsive", "hover", "focus", "dark", "dark-focus, dark-hover"],
+    backgroundColor: ["responsive", "hover", "focus", "dark", "dark-focus, dark-hover,hover-black"],
     textColor: [
       "responsive",
       "hover",

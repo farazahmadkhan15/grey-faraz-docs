@@ -36,7 +36,7 @@
           class="hidden lg:w-1/5 lg:flex items-center pl-4 lg:pl-8"
           :class="{
             'justify-between': lastRelease && settings.layout !== 'single',
-            'justify-end': !lastRelease || settings.layout === 'single',
+            'justify-end': !lastRelease || settings.layout === 'single'
           }"
         >
           <div class="flex items-center">
@@ -80,13 +80,12 @@
                   bg-white
                   dropdown-menu
                   hidden
-                  dark:bg-black-500
+                  dark:customColor
                   z-40
                   right-2
                   drop
                   rounded-md
                   shadow-lg
-                  ring-1 ring-black ring-opacity-5
                 "
                 role="menu"
                 aria-orientation="vertical"
@@ -106,7 +105,7 @@
                         justify-around
                         items-center
                         hover:bg-gray-100
-                        dark-hover:bg-gray-700
+                        dark-hover:bg-black-600
                       "
                     >
                       <nuxt-link
@@ -187,40 +186,40 @@ export default {
       Navitems: [
         {
           name: "Ecosystem",
-          link: "/",
+          link: "/"
         },
 
         {
           name: "Socials",
-          link: "/",
-        },
+          link: "/"
+        }
       ],
       Dropitems: [
         {
           name: "Follow on twitter",
-          link: "/",
+          link: "/"
         },
 
         {
           name: "Visit GitHub",
-          link: "/",
+          link: "/"
         },
         {
           name: "Check GitLab",
-          link: "/supporters",
+          link: "/supporters"
         },
         {
           name: "Join our Discord",
-          link: "/supporters",
+          link: "/supporters"
         },
         {
           name: "Follow on LinkedIn",
-          link: "/supporters",
-        },
+          link: "/supporters"
+        }
       ],
       scrolled: 0,
       isOpen: false,
-      isOpenDrop: false,
+      isOpenDrop: false
     };
   },
   computed: {
@@ -231,7 +230,7 @@ export default {
       },
       set(val) {
         this.$store.commit("menu/toggle", val);
-      },
+      }
     },
     logo() {
       if (!this.settings.logo) {
@@ -244,12 +243,12 @@ export default {
 
       return {
         light: this.settings.logo,
-        dark: this.settings.logo,
+        dark: this.settings.logo
       };
     },
     getHover() {
       this.isOpenDrop = !this.isOpenDrop;
-    },
+    }
   },
   beforeMount() {
     window.addEventListener("scroll", this.handleScroll);
@@ -275,7 +274,7 @@ export default {
       if (!this.$el.contains(e.target)) {
         this.isOpenDrop = false;
       }
-    },
+    }
   },
 
   mounted() {
@@ -283,7 +282,7 @@ export default {
   },
   beforeDestroy() {
     document.removeEventListener("click", this.close);
-  },
+  }
 };
 </script>
 
@@ -301,12 +300,10 @@ export default {
   margin-top: 1px !important;
   width: 400px !important;
 }
- 
+
 .btn-custom {
-border: 1px solid #EDEDED;
-box-sizing: border-box;
-white-space: nowrap !important;
-} 
-
-
+  border: 1px solid #ededed;
+  box-sizing: border-box;
+  white-space: nowrap !important;
+}
 </style>
