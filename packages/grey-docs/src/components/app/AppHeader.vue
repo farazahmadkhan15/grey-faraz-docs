@@ -36,7 +36,7 @@
           class="hidden lg:w-1/5 lg:flex items-center pl-4 lg:pl-8"
           :class="{
             'justify-between': lastRelease && settings.layout !== 'single',
-            'justify-end': !lastRelease || settings.layout === 'single'
+            'justify-end': !lastRelease || settings.layout === 'single',
           }"
         >
           <div class="flex items-center">
@@ -108,9 +108,7 @@
                         h-14
                         hover:w-96
                         hover:px-8
-                        border-r-0
-                        border-l-0
-                        border-t-0
+                        border-r-0 border-l-0 border-t-0
                         hover:bg-gray-100
                         hover:border-black-900
                         hover:border-r
@@ -119,7 +117,9 @@
                         dark-hover:border-r-0
                         dark-hover:border-l-0
                         dark-hover:bg-black-600
-                        border dark:border-altblacks-900"
+                        border
+                        dark:border-altblacks-900
+                      "
                       :href="socialLink.link"
                       target="blank"
                     >
@@ -159,9 +159,7 @@
                         h-14
                         hover:w-96
                         hover:px-8
-                        border-r-0
-                        border-l-0
-                        border-t-0
+                        border-r-0 border-l-0 border-t-0
                         hover:bg-gray-100
                         hover:border-black-900
                         hover:border-r
@@ -170,7 +168,9 @@
                         dark-hover:border-r-0
                         dark-hover:border-l-0
                         dark-hover:bg-black-600
-                        border dark:border-altblacks-900"
+                        border
+                        dark:border-altblacks-900
+                      "
                       :href="ecosystemLink.link"
                       target="blank"
                     >
@@ -209,12 +209,10 @@
               </p>
             </div>
 
-            <button
-              class=" dark:border-white w-28 h-11 ml-6 rounded-md btn-custom "
-            >
+            <button class="dark:border-white w-28 h-11 ml-6 rounded-md btn-cta">
               Support us
             </button>
-            <div class="flex items-center ml-12 ">
+            <div class="flex items-center ml-12">
               <AppLangSwitcher />
               <AppColorSwitcher />
             </div>
@@ -250,56 +248,56 @@ export default {
     return {
       navItems: [
         {
-          name: "Ecosystem"
+          name: "Ecosystem",
         },
         {
-          name: "Socials"
-        }
+          name: "Socials",
+        },
       ],
 
       socialLinks: [
         {
-          name: "Follow on twitter",
-          link: "https://twitter.com/grey_software"
+          name: "Follow on Twitter",
+          link: "https://twitter.com/grey_software",
         },
         {
           name: "Visit GitHub",
-          link: "https://github.com/grey-software"
+          link: "https://github.com/grey-software",
         },
         {
           name: "Check GitLab",
-          link: "https://gitlab.com/grey-software"
+          link: "https://gitlab.com/grey-software",
         },
         {
           name: "Join our Discord",
-          link: "https://discord.com/invite/2CGKQEe9xw"
+          link: "https://discord.com/invite/2CGKQEe9xw",
         },
         {
           name: "Follow on LinkedIn",
-          link: "https://www.linkedin.com/company/grey-software/"
-        }
+          link: "https://www.linkedin.com/company/grey-software/",
+        },
       ],
 
       ecosystemLinks: [
         {
           name: "Learn",
-          link: "https://learn.grey.software/"
+          link: "https://learn.grey.software/",
         },
         {
           name: "Resources",
-          link: "https://resources.grey.software/"
+          link: "https://resources.grey.software/",
         },
         {
           name: "Onboarding",
-          link: "https://onboarding.grey.software/"
+          link: "https://onboarding.grey.software/",
         },
         {
           name: "Organization",
-          link: "https://org.grey.software/"
-        }
+          link: "https://org.grey.software/",
+        },
       ],
       scrolled: 0,
-      isOpen: false
+      isOpen: false,
     };
   },
   computed: {
@@ -310,7 +308,7 @@ export default {
       },
       set(val) {
         this.$store.commit("menu/toggle", val);
-      }
+      },
     },
     logo() {
       if (!this.settings.logo) {
@@ -323,9 +321,9 @@ export default {
 
       return {
         light: this.settings.logo,
-        dark: this.settings.logo
+        dark: this.settings.logo,
       };
-    }
+    },
   },
 
   beforeMount() {
@@ -344,7 +342,7 @@ export default {
       }
       window.scrollTo(0, 0);
     },
-    noop() {}
-  }
+    noop() {},
+  },
 };
 </script>

@@ -1,14 +1,7 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  @variants dark {
-    .customColor {
-      background-color: #2D2D2D !important;
-    }
-  }
-} */
 * {
   box-sizing: border-box;
 }
@@ -18,8 +11,7 @@
   display: block !important;
 }
 
-
-.btn-custom {
+.btn-cta {
   border: 1px solid #ededed;
   box-sizing: border-box;
   white-space: nowrap !important;
