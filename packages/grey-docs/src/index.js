@@ -21,7 +21,7 @@ function themeModule() {
     const componentsDirStat = await fs.stat(componentsDirPath).catch(() => null)
     if (componentsDirStat && componentsDirStat.isDirectory()) {
       dirs.push({
-        path: componentsDirPath
+        path: componentsDirPath,
       })
     } else {
       nuxt.options.watch.push(componentsDirPath)
@@ -32,7 +32,7 @@ function themeModule() {
     if (globalComponentsDirStat && globalComponentsDirStat.isDirectory()) {
       dirs.push({
         path: globalComponentsDirPath,
-        global: true
+        global: true,
       })
     } else {
       nuxt.options.watch.push(globalComponentsDirPath)
@@ -40,7 +40,7 @@ function themeModule() {
   })
   // Configure content after each hook
   hook('content:file:beforeInsert', (document) => {
-    const regexp = new RegExp(`^/(${options.i18n.locales.map(locale => locale.code).join('|')})`, 'gi')
+    const regexp = new RegExp(`^/(${options.i18n.locales.map((locale) => locale.code).join('|')})`, 'gi')
     const { dir, slug, category } = document
     const _dir = dir.replace(regexp, '')
     const _slug = slug.replace(/^index/, '')
@@ -51,93 +51,82 @@ function themeModule() {
   })
   // Extend `/` route
   hook('build:extendRoutes', (routes) => {
-    const allRoute = routes.find(route => route.name === 'all')
+    const allRoute = routes.find((route) => route.name === 'all')
 
     routes.push({
       ...allRoute,
       path: '/',
-      name: 'index'
+      name: 'index',
     })
   })
 
   // Configure `tailwind.config.js` path
   options.tailwindcss.configPath = options.tailwindcss.configPath || path.resolve(options.rootDir, 'tailwind.config.js')
-  options.tailwindcss.cssPath = options.tailwindcss.cssPath || path.resolve(options.rootDir, options.dir.assets, 'css', 'tailwind.css')
+  options.tailwindcss.cssPath =
+    options.tailwindcss.cssPath || path.resolve(options.rootDir, options.dir.assets, 'css', 'tailwind.css')
   // Configure TailwindCSS
   hook('tailwindcss:config', function (defaultTailwindConfig) {
     Object.assign(defaultTailwindConfig, defu(defaultTailwindConfig, tailwindConfig({ nuxt })))
   })
 }
 
-const defaultConfig = docsOptions => ({
+const defaultConfig = (docsOptions) => ({
   target: 'static',
   ssr: true,
   srcDir: __dirname,
   privateRuntimeConfig: {
-    githubToken: process.env.GITHUB_TOKEN
+    githubToken: process.env.GITHUB_TOKEN,
   },
   head: {
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-    ]
+    meta: [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
   },
   generate: {
     fallback: '404.html',
-    routes: ['/']
+    routes: ['/'],
   },
   transpile: [
-    __dirname // transpile node_modules/@nuxt/content-theme-docs
+    __dirname, // transpile node_modules/@nuxt/content-theme-docs
   ],
-  css: [
-    '~/assets/css/main.css'
-  ],
+  css: ['~/assets/css/main.css'],
   plugins: [
     '@/plugins/markdown',
     '@/plugins/init',
     '@/plugins/i18n.client',
     '@/plugins/vue-scrollactive',
-    '@/plugins/menu.client'
+    '@/plugins/menu.client',
   ],
   babel: {
     plugins: [
       ['@babel/plugin-proposal-class-properties', { loose: true }],
       ['@babel/plugin-proposal-private-methods', { loose: true }],
-      ['@babel/plugin-proposal-private-property-in-object', { loose: true }]
-    ]
+      ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
+    ],
   },
-  buildModules: [
-    themeModule,
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode',
-    '@nuxtjs/pwa',
-    '@nuxtjs/google-fonts'
-  ],
-  modules: [
-    'nuxt-i18n',
-    '@nuxt/content'
-  ],
+  buildModules: [themeModule, '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', '@nuxtjs/pwa', '@nuxtjs/google-fonts'],
+  modules: ['nuxt-i18n', '@nuxt/content'],
   components: true,
   loading: {
-    color: docsOptions.primaryColor
+    color: docsOptions.primaryColor,
   },
   meta: {
-    theme_color: docsOptions.primaryColor
+    theme_color: docsOptions.primaryColor,
   },
   content: {
     markdown: {
       prism: {
-        theme: 'prism-themes/themes/prism-material-oceanic.css'
-      }
-    }
+        theme: 'prism-themes/themes/prism-material-oceanic.css',
+      },
+    },
   },
   i18n: {
-    locales: [{
-      code: 'en',
-      iso: 'en-US',
-      file: 'en-US.js',
-      name: 'English'
-    }],
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        file: 'en-US.js',
+        name: 'English',
+      },
+    ],
     defaultLocale: 'en',
     parsePages: false,
     lazy: true,
@@ -151,34 +140,32 @@ const defaultConfig = docsOptions => ({
             year: 'numeric',
             month: 'short',
             day: 'numeric',
-            weekday: 'short'
-          }
+            weekday: 'short',
+          },
         },
         fr: {
           long: {
             year: 'numeric',
             month: 'long',
             day: 'numeric',
-            weekday: 'short'
-          }
-        }
-      }
-    }
+            weekday: 'short',
+          },
+        },
+      },
+    },
   },
   googleFonts: {
     families: {
-      'Inter': true,
-      'DM+Mono': true
-    }
+      Inter: true,
+      'DM+Mono': true,
+    },
   },
-  tailwindcss: {
-
-  }
+  tailwindcss: {},
 })
 
 export default (userConfig) => {
   userConfig.docs = defu(userConfig.docs, {
-    primaryColor: '#00CD81'
+    primaryColor: '#00CD81',
   })
 
   const config = defu.arrayFn(userConfig, defaultConfig(userConfig.docs))

@@ -1,15 +1,5 @@
 <template>
-  <div
-    class="
-      flex flex-col
-      shadow-xl
-      items-center
-      rounded-lg
-      mx-2
-      my-6
-      profile-card
-    "
-  >
+  <div class="flex flex-col shadow-xl items-center rounded-lg mx-2 my-6 profile-card">
     <img
       class="w-24 h-24 my-0 rounded-full object-cover mr-4 shadow"
       :src="profile.avatar"
@@ -25,12 +15,7 @@
           <div>{{ profile.position }}</div>
         </div>
         <div class="mt-6 flex justify-center items-center">
-          <a
-            v-if="profile.website"
-            :href="profile.website"
-            target="_blank"
-            class="flex mr-2 text-primary text-md mr-3"
-          >
+          <a v-if="profile.website" :href="profile.website" target="_blank" class="flex mr-2 text-primary text-md mr-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -68,20 +53,13 @@
               stroke-linejoin="round"
               class="feather feather-linkedin"
             >
-              <path
-                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-              ></path>
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
               <rect x="2" y="9" width="4" height="12"></rect>
               <circle cx="4" cy="4" r="2"></circle>
             </svg>
           </a>
 
-          <a
-            v-if="profile.github"
-            :href="profile.github"
-            target="_blank"
-            class="flex mr-2 text-primary text-md mr-3"
-          >
+          <a v-if="profile.github" :href="profile.github" target="_blank" class="flex mr-2 text-primary text-md mr-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -100,12 +78,7 @@
             </svg>
           </a>
 
-          <a
-            v-if="profile.gitlab"
-            :href="profile.gitlab"
-            target="_blank"
-            class="flex mr-2 text-primary text-md mr-3"
-          >
+          <a v-if="profile.gitlab" :href="profile.gitlab" target="_blank" class="flex mr-2 text-primary text-md mr-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -141,7 +114,7 @@ export default {
       linkedin: String,
     },
   },
-};
+}
 </script>
 
 <style scoped>

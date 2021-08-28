@@ -1,45 +1,45 @@
 module.exports = {
-  prompts () {
+  prompts() {
     return [
       {
         name: 'name',
         message: 'Project name:',
         default: this.outFolder,
-        filter: val => val.toLowerCase()
+        filter: (val) => val.toLowerCase(),
       },
       {
         name: 'title',
         message: 'Project title:',
-        default: 'Documentation Website'
-      }
+        default: 'Documentation Website',
+      },
     ]
   },
-  templateData () {
+  templateData() {
     const pm = this.answers.pm === 'yarn' ? 'yarn' : 'npm'
     const pmRun = this.answers.pm === 'yarn' ? 'yarn' : 'npm run'
 
     return {
       pm,
-      pmRun
+      pmRun,
     }
   },
   actions: [
     {
       type: 'add',
       files: '**',
-      templateDir: '../template'
+      templateDir: '../template',
     },
     {
       type: 'move',
       patterns: {
         gitignore: '.gitignore',
-        '_package.json': 'package.json'
-      }
-    }
+        '_package.json': 'package.json',
+      },
+    },
   ],
-  async completed () {
+  async completed() {
     this.gitInit()
     await this.npmInstall()
     this.showProjectTips()
-  }
+  },
 }

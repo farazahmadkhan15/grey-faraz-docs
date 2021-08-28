@@ -13,13 +13,13 @@ export default {
   props: {
     error: {
       type: Object,
-      required: true
+      required: true,
+    },
+  },
+  head() {
+    return {
+      title: this.error.message,
     }
   },
-  head () {
-    return {
-      title: this.error.message
-    }
-  }
 }
 </script>

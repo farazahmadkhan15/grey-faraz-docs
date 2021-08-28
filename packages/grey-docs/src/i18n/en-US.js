@@ -1,12 +1,12 @@
 export default {
   search: {
-    placeholder: 'Search the docs (Press "/" to focus)'
+    placeholder: 'Search the docs (Press "/" to focus)',
   },
   toc: {
-    title: 'On this page'
+    title: 'On this page',
   },
   article: {
     github: 'Edit this page on GitHub',
-    updatedAt: 'Updated at'
-  }
+    updatedAt: 'Updated at',
+  },
 }

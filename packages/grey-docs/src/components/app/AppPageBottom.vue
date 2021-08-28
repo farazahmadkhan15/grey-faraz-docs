@@ -10,7 +10,7 @@
       <IconExternalLink class="w-4 h-4 ml-1" />
     </a>
     <span class="text-gray-600 dark:text-gray-400 text-sm font-medium flex items-center">
-      {{ $t("article.updatedAt") }} {{ $d(Date.parse(document.updatedAt), "long") }}
+      {{ $t('article.updatedAt') }} {{ $d(Date.parse(document.updatedAt), 'long') }}
     </span>
   </div>
 </template>
@@ -22,15 +22,12 @@ export default {
   props: {
     document: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   computed: {
-    ...mapGetters([
-      'settings',
-      'githubUrls'
-    ]),
-    link () {
+    ...mapGetters(['settings', 'githubUrls']),
+    link() {
       if (!this.settings.github) {
         return
       }
@@ -40,9 +37,11 @@ export default {
         'edit',
         this.settings.defaultBranch,
         this.settings.defaultDir,
-        `content${this.document.path}${this.document.extension}`
-      ].filter(path => !!path).join('/')
-    }
-  }
+        `content${this.document.path}${this.document.extension}`,
+      ]
+        .filter((path) => !!path)
+        .join('/')
+    },
+  },
 }
 </script>

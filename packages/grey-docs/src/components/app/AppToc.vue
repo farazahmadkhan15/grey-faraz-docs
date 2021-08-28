@@ -1,15 +1,6 @@
 <template>
   <div v-if="toc.length" class="w-full lg:w-1/4 block relative">
-    <div
-      class="
-        lg:sticky
-        lg:top-16
-        overflow-y-auto
-        h-full
-        lg:h-auto
-        lg:max-h-(screen-16)
-      "
-    >
+    <div class="lg:sticky lg:top-16 overflow-y-auto h-full lg:h-auto lg:max-h-(screen-16)">
       <nav
         class="py-4 lg:py-8 lg:text-right"
         :class="{
@@ -17,42 +8,14 @@
           'lg:px-8': settings.layout === 'single',
         }"
       >
-        <p
-          class="
-            mb-3
-            lg:mb-2
-            text-gray-500
-            uppercase
-            tracking-wider
-            font-bold
-            text-sm
-            lg:text-xs
-          "
-        >
-          {{ $t("toc.title") }}
+        <p class="mb-3 lg:mb-2 text-gray-500 uppercase tracking-wider font-bold text-sm lg:text-xs">
+          {{ $t('toc.title') }}
         </p>
-        <scrollactive
-          highlight-first-item
-          active-class="text-primary-500"
-          :offset="0"
-          tag="ul"
-        >
-          <li
-            v-for="link of toc"
-            :key="link.id"
-            class="text-gray-700 dark:text-gray-300"
-          >
+        <scrollactive highlight-first-item active-class="text-primary-500" :offset="0" tag="ul">
+          <li v-for="link of toc" :key="link.id" class="text-gray-700 dark:text-gray-300">
             <a
               :href="`#${link.id}`"
-              class="
-                block
-                text-sm
-                scrollactive-item
-                transition-padding
-                ease-in-out
-                duration-300
-                hover:pl-1
-              "
+              class="block text-sm scrollactive-item transition-padding ease-in-out duration-300 hover:pl-1"
               :class="{
                 'py-2 font-black': link.depth === 2,
                 'ml-2 pb-2 font-medium': link.depth === 3,
@@ -70,7 +33,7 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   props: {
@@ -80,7 +43,7 @@ export default {
     },
   },
   computed: {
-    ...mapGetters(["settings"]),
+    ...mapGetters(['settings']),
   },
-};
+}
 </script>

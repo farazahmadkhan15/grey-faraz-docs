@@ -1,16 +1,7 @@
 <template>
-  <svg
-    width="175"
-    height="32"
-    viewBox="0 0 239 36"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="175" height="32" viewBox="0 0 239 36" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0)">
-      <path
-        d="M11.7494 0V7.43088L4.24916 0H0V4.22301L7.47689 11.6771H0V16.8166H16.9208V0H11.7494Z"
-        fill="#181818"
-      />
+      <path d="M11.7494 0V7.43088L4.24916 0H0V4.22301L7.47689 11.6771H0V16.8166H16.9208V0H11.7494Z" fill="#181818" />
       <path
         d="M0 24.317H7.47689L0 31.7711V35.9999H4.24916L11.7494 28.5632V35.9999H16.9208V19.1833H0V24.317Z"
         fill="#181818"

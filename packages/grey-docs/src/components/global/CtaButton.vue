@@ -13,8 +13,7 @@
       rounded-md
       border border-black-800
       dark:border-white
-      hover:text-white
-      hover:bg-black-500
+      hover:text-white hover:bg-black-500
       dark-hover:text-black-500 dark-hover:bg-gray-50
     "
   >
@@ -28,6 +27,5 @@ export default {
     text: String,
     link: String,
   },
-};
+}
 </script>
-
