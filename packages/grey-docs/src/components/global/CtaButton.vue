@@ -10,7 +10,7 @@
       px-5
       w-32
       rounded-md
-      border border-black-500
+      border border-black-300
       hover:border-black-800
       dark:border-gray-400
       dark-hover:border-gray-50
