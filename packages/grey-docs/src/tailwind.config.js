@@ -29,7 +29,7 @@ module.exports = ({ nuxt }) => ({
         primary: getColors(nuxt.options.docs.primaryColor),
         black: getColors("#181818"),
         altblack: getColors("#2d2d2d"),
-        altblacks : getColors('#fefefe')
+        altwhite : getColors('#fefefe')
 
       },
       typography: theme => ({

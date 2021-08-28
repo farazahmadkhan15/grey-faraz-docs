@@ -86,7 +86,7 @@
                   w-96
                   rounded
                   shadow-lg
-                  border border-black-900
+              
                 "
                 role="menu"
                 aria-orientation="vertical"
@@ -111,15 +111,11 @@
                         hover:px-8
                         border-r-0 border-l-0 border-t-0
                         hover:bg-gray-100
-                        hover:border-black-900
-                        hover:border-r
-                        hover:border-l
-                        hover:border-b-0
                         dark-hover:border-r-0
                         dark-hover:border-l-0
                         dark-hover:bg-black-600
                         border
-                        dark:border-altblacks-900
+                        dark:border-altwhite-900
                       "
                       :href="socialLink.link"
                       target="blank"
@@ -129,18 +125,7 @@
                       >
                         {{ socialLink.name }}
                       </div>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5 text-gray-700 dark:text-white"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
+                      <icon-chevron-right class="h-5 w-5 text-gray-700 dark:text-white" />
                     </a>
                   </div>
                 </div>
@@ -163,15 +148,11 @@
                         hover:px-8
                         border-r-0 border-l-0 border-t-0
                         hover:bg-gray-100
-                        hover:border-black-900
-                        hover:border-r
-                        hover:border-l
-                        hover:border-b-0
                         dark-hover:border-r-0
                         dark-hover:border-l-0
                         dark-hover:bg-black-600
                         border
-                        dark:border-altblacks-900
+                        dark:border-altwhite-900
                       "
                       :href="ecosystemLink.link"
                       target="blank"
@@ -181,18 +162,7 @@
                       >
                         {{ ecosystemLink.name }}
                       </div>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5 text-gray-700 dark:text-white"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
+                      <icon-chevron-right class="h-5 w-5 text-gray-700 dark:text-white" />
                     </a>
                   </div>
                 </div>
@@ -246,8 +216,10 @@
 
 <script>
 import { mapGetters } from "vuex";
+import IconChevronRight from '../global/IconChevronRight.vue';
 
 export default {
+  components: { IconChevronRight },
   data() {
     return {
       navItems: [
