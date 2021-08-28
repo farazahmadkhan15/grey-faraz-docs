@@ -73,7 +73,7 @@
                   >Onboarding</a
                 >
               </li>
-              <li class="mb-2 md:mb-0">
+              <li class="mr-6 mb-2 md:mb-0">
                 <a
                   class="
                     text-sm text-gray-900
@@ -83,6 +83,18 @@
                   href="https://org.grey.software/"
                   target="_blank"
                   >Organization</a
+                >
+              </li>
+              <li class="mb-2 md:mb-0">
+                <a
+                  class="
+                    text-sm text-gray-900
+                    dark:text-gray-300
+                    hover:text-gray-700
+                  "
+                  href="https://glossary.grey.software/"
+                  target="_blank"
+                  >Glossary</a
                 >
               </li>
             </ul>
