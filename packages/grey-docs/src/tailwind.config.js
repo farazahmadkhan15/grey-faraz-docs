@@ -29,7 +29,7 @@ module.exports = ({ nuxt }) => ({
         primary: getColors(nuxt.options.docs.primaryColor),
         black: getColors("#181818"),
         altblack: getColors("#2d2d2d"),
-        altwhite : getColors('#fefefe')
+        altwhite: getColors('#fefefe')
 
       },
       typography: theme => ({
@@ -40,15 +40,16 @@ module.exports = ({ nuxt }) => ({
             },
             a: {
               textDecoration: "none",
-              color: theme("colors.primary.400"),
-              fontWeight: "500",
+              fontSize: '1.04rem',
+              color: theme("colors.black.400"),
+              fontWeight: "600",
               transition: "all 0.2s ease-out",
               "&:hover": {
-                color: theme("colors.primary.700")
+                color: theme("colors.black.700")
               }
             },
             h1: {
-              color: "#475569",
+              color: "#2d2d2d",
               fontWeight: "bold",
               fontSize: "56px",
               lineHeight: "95%",
@@ -56,7 +57,7 @@ module.exports = ({ nuxt }) => ({
               marginBottom: "0.25em"
             },
             h2: {
-              color: "#475569",
+              color: "#2d2d2d",
               fontWeight: "bold",
               fontSize: "42px",
               lineHeight: "95%",
@@ -65,7 +66,7 @@ module.exports = ({ nuxt }) => ({
               borderBottomWidth: "0px"
             },
             h3: {
-              color: "#475569",
+              color: "#2d2d2d",
               fontWeight: "bold",
               fontSize: "36px",
               lineHeight: "95%",
@@ -74,7 +75,7 @@ module.exports = ({ nuxt }) => ({
               marginBottom: "0.75em",
             },
             h4: {
-              color: "#475569",
+              color: "#2d2d2d",
               fontWeight: "600",
               fontSize: "24px",
               lineHeight: "95%",
@@ -82,7 +83,7 @@ module.exports = ({ nuxt }) => ({
               marginBottom: "0.75em",
             },
             h5: {
-              color: "#475569",
+              color: "#2d2d2d",
               fontWeight: "600",
               fontSize: "20px",
               lineHeight: "95%",
@@ -134,7 +135,10 @@ module.exports = ({ nuxt }) => ({
               color: theme("colors.gray.300")
             },
             a: {
-              color: theme("colors.primary.500")
+              color: theme("colors.gray.300"),
+              "&:hover": {
+                color: theme("colors.gray.100")
+              }
             },
             strong: {
               color: theme("colors.gray.100")

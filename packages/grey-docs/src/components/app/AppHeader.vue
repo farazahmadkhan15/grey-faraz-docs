@@ -1,16 +1,6 @@
 <template>
   <nav
-    class="
-      fixed
-      top-0
-      z-40
-      w-full
-      py-3
-      border-b
-      dark:border-gray-800
-      bg-white
-      dark:bg-black-500
-    "
+    class="fixed top-0 z-40 w-full py-3 bg-white dark:bg-black-500"
     :class="{ 'shadow border-transparent': scrolled }"
     @click="scrollToTop"
   >
@@ -36,7 +26,7 @@
           class="hidden lg:w-1/5 lg:flex items-center pl-4 lg:pl-8"
           :class="{
             'justify-between': lastRelease && settings.layout !== 'single',
-            'justify-end': !lastRelease || settings.layout === 'single'
+            'justify-end': !lastRelease || settings.layout === 'single',
           }"
         >
           <div class="flex items-center">
@@ -170,9 +160,13 @@
               </nuxt-link>
             </div>
 
-            <button class="dark:border-white w-28 h-11 ml-6 rounded-md btn-cta">
-              <a href="https://github.com/sponsors/grey-software">Support us</a>
-            </button>
+            <!-- <button class="dark:border-white w-28 h-11 ml-6 rounded-md btn-cta">
+              <a href="">Support us</a>
+            </button> -->
+            <cta-button
+              link="https://github.com/sponsors/grey-software"
+              text="Support Us"
+            />
 
             <div class="flex items-center ml-12">
               <AppLangSwitcher />
@@ -204,68 +198,69 @@
 
 <script>
 import { mapGetters } from "vuex";
+import CtaButton from "../global/CtaButton.vue";
 import IconChevronRight from "../global/IconChevronRight.vue";
 
 export default {
-  components: { IconChevronRight },
+  components: { IconChevronRight, CtaButton },
   data() {
     return {
       navItems: [
         {
-          name: "Ecosystem"
+          name: "Ecosystem",
         },
         {
-          name: "Socials"
-        }
+          name: "Socials",
+        },
       ],
 
       socialLinks: [
         {
           name: "Follow on Twitter",
-          link: "https://twitter.com/grey_software"
+          link: "https://twitter.com/grey_software",
         },
         {
           name: "Visit GitHub",
-          link: "https://github.com/grey-software"
+          link: "https://github.com/grey-software",
         },
         {
           name: "Check GitLab",
-          link: "https://gitlab.com/grey-software"
+          link: "https://gitlab.com/grey-software",
         },
         {
           name: "Join our Discord",
-          link: "https://discord.com/invite/2CGKQEe9xw"
+          link: "https://discord.com/invite/2CGKQEe9xw",
         },
         {
           name: "Follow on LinkedIn",
-          link: "https://www.linkedin.com/company/grey-software/"
-        }
+          link: "https://www.linkedin.com/company/grey-software/",
+        },
       ],
 
       ecosystemLinks: [
         {
           name: "Learn",
-          link: "https://learn.grey.software/"
+          link: "https://learn.grey.software/",
         },
         {
           name: "Resources",
-          link: "https://resources.grey.software/"
+          link: "https://resources.grey.software/",
         },
         {
           name: "Onboarding",
-          link: "https://onboarding.grey.software/"
+          link: "https://onboarding.grey.software/",
         },
         {
           name: "Organization",
-          link: "https://org.grey.software/"
+          link: "https://org.grey.software/",
         },
         {
           name: "Glossary",
-          link: "https://glossary.grey.software/"
-        }
+          link: "https://glossary.grey.software/",
+        },
       ],
       scrolled: 0,
-      isOpen: false
+      isOpen: false,
     };
   },
   computed: {
@@ -276,7 +271,7 @@ export default {
       },
       set(val) {
         this.$store.commit("menu/toggle", val);
-      }
+      },
     },
     logo() {
       if (!this.settings.logo) {
@@ -289,9 +284,9 @@ export default {
 
       return {
         light: this.settings.logo,
-        dark: this.settings.logo
+        dark: this.settings.logo,
       };
-    }
+    },
   },
 
   beforeMount() {
@@ -310,7 +305,7 @@ export default {
       }
       window.scrollTo(0, 0);
     },
-    noop() {}
-  }
+    noop() {},
+  },
 };
 </script>

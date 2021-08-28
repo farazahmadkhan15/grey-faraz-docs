@@ -48,7 +48,7 @@
             dark:bg-gray-800
           "
           :class="{ 'rounded-b-none': focus && (searching || results.length) }"
-          :placeholder="$t('search.placeholder')"
+          placeholder="Search"
           type="search"
           autocomplete="off"
           @focus="onFocus"

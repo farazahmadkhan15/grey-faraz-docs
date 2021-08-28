@@ -2,7 +2,7 @@
   <div class="pt-16">
     <AppHeader />
 
-    <main class="container mx-auto px-4 pt-6">
+    <main class="container mx-auto px-4 pt-6 h-full">
       <div class="flex flex-wrap relative">
         <AppNav />
 

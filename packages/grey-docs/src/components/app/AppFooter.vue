@@ -12,7 +12,8 @@
       justify-between
       xs:items-start
       md:items-center
-      p-4
+      px-4
+      py-8
     "
   >
     <div>
@@ -45,85 +46,14 @@
             target="_blank"
             >{{ link.text }}</a
           >
-            <ul
-              class="
-                w-full
-                lg:w-auto
-                inline-flex
-                flex-wrap
-                mb-4
-                lg:mb-0
-                lg:mr-12
-              "
-            >
-              <li class="mr-6 mb-2 md:mb-0">
-                <a
-                  class="
-                    text-sm text-gray-900
-                    dark:text-gray-300
-                    hover:text-gray-700
-                  "
-                  href="https://learn.grey.software/"
-                  target="_blank"
-                  >Learn</a
-                >
-              </li>
-              <li class="mr-6 mb-2 md:mb-0">
-                <a
-                  class="
-                    text-sm text-gray-900
-                    dark:text-gray-300
-                    hover:text-gray-700
-                  "
-                  href="https://resources.grey.software/"
-                  target="_blank"
-                  >Resources</a
-                >
-              </li>
-              <li class="mr-6 mb-2 md:mb-0">
-                <a
-                  class="
-                    text-sm text-gray-900
-                    dark:text-gray-300
-                    hover:text-gray-700
-                  "
-                  href="https://onboarding.grey.software/"
-                  target="_blank"
-                  >Onboarding</a
-                >
-              </li>
-              <li class="mr-6 mb-2 md:mb-0">
-                <a
-                  class="
-                    text-sm text-gray-900
-                    dark:text-gray-300
-                    hover:text-gray-700
-                  "
-                  href="https://org.grey.software/"
-                  target="_blank"
-                  >Organization</a
-                >
-              </li>
-              <li class="mb-2 md:mb-0">
-                <a
-                  class="
-                    text-sm text-gray-900
-                    dark:text-gray-300
-                    hover:text-gray-700
-                  "
-                  href="https://glossary.grey.software/"
-                  target="_blank"
-                  >Glossary</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <p class="mt-6 lg:hidden text-sm text-gray-400">
-          Made with Love, Joy, and Hope
-        </p>
-      </div>
-    </section>
+        </li>
+      </ul>
+    </div>
+    <div class="hidden lg:flex justify-end">
+      <p class="text-sm text-black-600 dark:text-white">
+        Made with Love, Joy, and Hope!
+      </p>
+    </div>
   </footer>
 </template>
 
