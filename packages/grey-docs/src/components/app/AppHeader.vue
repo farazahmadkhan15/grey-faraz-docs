@@ -36,7 +36,7 @@
           class="hidden lg:w-1/5 lg:flex items-center pl-4 lg:pl-8"
           :class="{
             'justify-between': lastRelease && settings.layout !== 'single',
-            'justify-end': !lastRelease || settings.layout === 'single',
+            'justify-end': !lastRelease || settings.layout === 'single'
           }"
         >
           <div class="flex items-center">
@@ -59,18 +59,7 @@
                 >
                   {{ navItem.name }}
                 </p>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
+                <icon-chevron-down class="h-5 w-5" />
               </div>
 
               <!-- below code is for dropdown with custom class dropdown-menu -->
@@ -86,7 +75,6 @@
                   w-96
                   rounded
                   shadow-lg
-              
                 "
                 role="menu"
                 aria-orientation="vertical"
@@ -111,8 +99,6 @@
                         hover:px-8
                         border-r-0 border-l-0 border-t-0
                         hover:bg-gray-100
-                        dark-hover:border-r-0
-                        dark-hover:border-l-0
                         dark-hover:bg-black-600
                         border
                         dark:border-altwhite-900
@@ -125,7 +111,9 @@
                       >
                         {{ socialLink.name }}
                       </div>
-                      <icon-chevron-right class="h-5 w-5 text-gray-700 dark:text-white" />
+                      <icon-chevron-right
+                        class="h-5 w-5 text-gray-700 dark:text-white"
+                      />
                     </a>
                   </div>
                 </div>
@@ -148,8 +136,6 @@
                         hover:px-8
                         border-r-0 border-l-0 border-t-0
                         hover:bg-gray-100
-                        dark-hover:border-r-0
-                        dark-hover:border-l-0
                         dark-hover:bg-black-600
                         border
                         dark:border-altwhite-900
@@ -162,7 +148,9 @@
                       >
                         {{ ecosystemLink.name }}
                       </div>
-                      <icon-chevron-right class="h-5 w-5 text-gray-700 dark:text-white" />
+                      <icon-chevron-right
+                        class="h-5 w-5 text-gray-700 dark:text-white"
+                      />
                     </a>
                   </div>
                 </div>
@@ -216,7 +204,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import IconChevronRight from '../global/IconChevronRight.vue';
+import IconChevronRight from "../global/IconChevronRight.vue";
 
 export default {
   components: { IconChevronRight },
@@ -224,56 +212,60 @@ export default {
     return {
       navItems: [
         {
-          name: "Ecosystem",
+          name: "Ecosystem"
         },
         {
-          name: "Socials",
-        },
+          name: "Socials"
+        }
       ],
 
       socialLinks: [
         {
           name: "Follow on Twitter",
-          link: "https://twitter.com/grey_software",
+          link: "https://twitter.com/grey_software"
         },
         {
           name: "Visit GitHub",
-          link: "https://github.com/grey-software",
+          link: "https://github.com/grey-software"
         },
         {
           name: "Check GitLab",
-          link: "https://gitlab.com/grey-software",
+          link: "https://gitlab.com/grey-software"
         },
         {
           name: "Join our Discord",
-          link: "https://discord.com/invite/2CGKQEe9xw",
+          link: "https://discord.com/invite/2CGKQEe9xw"
         },
         {
           name: "Follow on LinkedIn",
-          link: "https://www.linkedin.com/company/grey-software/",
-        },
+          link: "https://www.linkedin.com/company/grey-software/"
+        }
       ],
 
       ecosystemLinks: [
         {
           name: "Learn",
-          link: "https://learn.grey.software/",
+          link: "https://learn.grey.software/"
         },
         {
           name: "Resources",
-          link: "https://resources.grey.software/",
+          link: "https://resources.grey.software/"
         },
         {
           name: "Onboarding",
-          link: "https://onboarding.grey.software/",
+          link: "https://onboarding.grey.software/"
         },
         {
           name: "Organization",
-          link: "https://org.grey.software/",
+          link: "https://org.grey.software/"
         },
+        {
+          name: "Glossary",
+          link: "https://glossary.grey.software/"
+        }
       ],
       scrolled: 0,
-      isOpen: false,
+      isOpen: false
     };
   },
   computed: {
@@ -284,7 +276,7 @@ export default {
       },
       set(val) {
         this.$store.commit("menu/toggle", val);
-      },
+      }
     },
     logo() {
       if (!this.settings.logo) {
@@ -297,9 +289,9 @@ export default {
 
       return {
         light: this.settings.logo,
-        dark: this.settings.logo,
+        dark: this.settings.logo
       };
-    },
+    }
   },
 
   beforeMount() {
@@ -318,7 +310,7 @@ export default {
       }
       window.scrollTo(0, 0);
     },
-    noop() {},
-  },
+    noop() {}
+  }
 };
 </script>
