@@ -198,7 +198,8 @@
             </div>
 
             <div class="flex items-center mr-8">
-              <p
+              <nuxt-link
+                to="/credits"
                 class="
                   dark:text-gray-300
                   hover:text-primary-300
@@ -206,12 +207,13 @@
                 "
               >
                 Credits
-              </p>
+              </nuxt-link>
             </div>
 
             <button class="dark:border-white w-28 h-11 ml-6 rounded-md btn-cta">
-              Support us
+              <a href="https://github.com/sponsors/grey-software">Support us</a>
             </button>
+
             <div class="flex items-center ml-12">
               <AppLangSwitcher />
               <AppColorSwitcher />
