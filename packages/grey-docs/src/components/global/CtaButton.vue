@@ -4,17 +4,16 @@
     class="
       transition-all
       focus:outline-none
-      text-black-500
       dark:text-white
       text-md
-      py-2
+      py-3
       px-5
       w-32
       rounded-md
-      border border-black-800
-      dark:border-white
-      hover:text-white hover:bg-black-500
-      dark-hover:text-black-500 dark-hover:bg-gray-50
+      border border-black-500
+      hover:border-black-800
+      dark:border-gray-400
+      dark-hover:border-gray-50
     "
   >
     {{ text }}
