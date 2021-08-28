@@ -6,8 +6,9 @@
       @click="$colorMode.value === 'dark' ? $colorMode.preference = 'light' : $colorMode.preference = 'dark'"
     >
       <client-only>
-        <IconSun v-if="$colorMode.value === 'light'" class="w-6 h-6" />
-        <IconMoon v-else class="w-6 h-6" />
+        <IconLight v-if="$colorMode.value === 'light'" />
+        <IconDark v-else />
+     
       </client-only>
     </button>
   </span>

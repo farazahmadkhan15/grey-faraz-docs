@@ -27,7 +27,10 @@ module.exports = ({ nuxt }) => ({
       },
       colors: {
         primary: getColors(nuxt.options.docs.primaryColor),
-        black: getColors("#181818")
+        black: getColors("#181818"),
+        altblack: getColors("#2d2d2d"),
+        altwhite : getColors('#fefefe')
+
       },
       typography: theme => ({
         DEFAULT: {
@@ -126,6 +129,7 @@ module.exports = ({ nuxt }) => ({
         dark: {
           css: {
             color: theme("colors.gray.300"),
+
             '[class~="lead"]': {
               color: theme("colors.gray.300")
             },
@@ -197,7 +201,7 @@ module.exports = ({ nuxt }) => ({
   variants: {
     margin: ["responsive", "last"],
     padding: ["responsive", "hover"],
-    backgroundColor: ["responsive", "hover", "focus", "dark", "dark-focus"],
+    backgroundColor: ["responsive", "hover", "focus", "dark", "dark-focus, dark-hover"],
     textColor: [
       "responsive",
       "hover",
