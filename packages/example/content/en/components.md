@@ -14,4 +14,7 @@ category: Guide
 <cta-button text="Explore" link="https://ecosystem.grey.software">
 </cta-button>
 
+### Sponser Card
+<SponserCard></SponserCard>
+
 <br></br>
