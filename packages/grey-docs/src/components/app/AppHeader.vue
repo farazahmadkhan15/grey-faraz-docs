@@ -106,6 +106,7 @@
                         items-center
                         w-80
                         h-14
+                        transition-all
                         hover:w-96
                         hover:px-8
                         border-r-0 border-l-0 border-t-0
@@ -157,6 +158,7 @@
                         items-center
                         w-80
                         h-14
+                        transition-all
                         hover:w-96
                         hover:px-8
                         border-r-0 border-l-0 border-t-0
