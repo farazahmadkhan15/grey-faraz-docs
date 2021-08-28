@@ -16,23 +16,23 @@ export default {
   props: {
     type: {
       type: String,
-      default: "info",
+      default: 'info',
       validator(value) {
-        return ["info", "success", "warning", "danger"].includes(value);
+        return ['info', 'success', 'warning', 'danger'].includes(value)
       },
     },
   },
   computed: {
     icon() {
       return {
-        info: "IconInformationCircle",
-        success: "IconCheckCircle",
-        warning: "IconExclamationCircle",
-        danger: "IconXCircle",
-      }[this.type];
+        info: 'IconInformationCircle',
+        success: 'IconCheckCircle',
+        warning: 'IconExclamationCircle',
+        danger: 'IconXCircle',
+      }[this.type]
     },
   },
-};
+}
 </script>
 
 <style>

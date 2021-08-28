@@ -1,11 +1,23 @@
 <template>
-  <a :href="link" target="_blank">
-    <button
-      type="button"
-      class="btn-transition focus:outline-none dark:text-white light:text-gray-800 text-md py-2 px-5 rounded-md border border-gray-800 dark:border-white hover:text-white hover:bg-primary-500"
-    >
-      {{ text }}
-    </button>
+  <a
+    :href="link"
+    class="
+      transition-all
+      focus:outline-none
+      text-black-500
+      dark:text-white
+      text-md
+      py-2
+      px-5
+      w-32
+      rounded-md
+      border border-black-800
+      dark:border-white
+      hover:text-white hover:bg-black-500
+      dark-hover:text-black-500 dark-hover:bg-gray-50
+    "
+  >
+    {{ text }}
   </a>
 </template>
 
@@ -15,15 +27,5 @@ export default {
     text: String,
     link: String,
   },
-};
-</script>
-
-<style scoped>
-.btn-transition {
-transition-property: all;
-transition-timing-function: ease-out;
-transition-duration: 200ms;
 }
-
-</style>
-
+</script>
