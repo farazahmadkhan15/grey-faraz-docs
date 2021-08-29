@@ -9,6 +9,7 @@ category: Guide
 
 <author name="Arsala" desc="President at Grey Software" linkedin-url="https://linkedin.com/in/ArsalaBangash" twitter="arsalagrey" avatar-url="https://gitlab.com/uploads/-/system/user/avatar/2274539/avatar.png" gitlab-url="https://gitlab.com/ArsalaBangash" github-url="https://github.com/ArsalaBangash" ></author>
 
+
 ### Profile Card
 
 <profile-card :profile="{name: 'Arsala Grey',
@@ -18,8 +19,15 @@ avatar: 'https://gitlab.com/uploads/-/system/user/avatar/2274539/avatar.png',
       gitlab: 'https://gitlab.com/ArsalaBangash',
       linkedin: 'https://linkedin.com/in/ArsalaBangash'}"></profile-card>
 
+
 ### CTA Button
 
 <cta-button text="Explore" link="https://ecosystem.grey.software"></cta-button>
+
+### Sponsor Card
+
+<SponsorCard name="ArsalaBangash" amount="$20/Month" start-date="Sponsor Since August 2020" github-url= "https://github.com/ArsalaBangash" ></SponsorCard>
+
+
 
 <br></br>
