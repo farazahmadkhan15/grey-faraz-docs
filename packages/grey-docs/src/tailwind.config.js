@@ -24,6 +24,7 @@ module.exports = ({ nuxt }) => ({
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         mono: ['DM Mono', ...defaultTheme.fontFamily.mono],
+        logo: ['General Sans', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: getColors(nuxt.options.docs.primaryColor),

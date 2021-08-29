@@ -79,6 +79,7 @@ const defaultConfig = (docsOptions) => ({
   },
   head: {
     meta: [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
+    link: [{ rel: 'stylesheet', href: "https://api.fontshare.com/css?f[]=general-sans@500&display=swap" }]
   },
   generate: {
     fallback: '404.html',

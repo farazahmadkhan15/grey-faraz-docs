@@ -12,8 +12,22 @@
             class="flex-shrink-0 flex-1 font-bold text-xl"
             :aria-label="`${settings.title} Logo`"
           >
-            <GreySoftwareLogoLight class="light-img" />
-            <GreySoftwareLogoDark class="dark-img" />
+            <div class="flex items-center">
+              <IconLogoLight v-if="$colorMode.value === 'light'" />
+              <IconLogoDark v-else />
+              <span
+                class="
+                  font-logo font-medium
+                  text-2xl text-black-500
+                  dark:text-white
+                  ml-2
+                  tracking-tight
+                  leading-none
+                  mb-1
+                "
+                >{{ settings.title }}</span
+              >
+            </div>
           </NuxtLink>
         </div>
         <div v-if="settings.layout !== 'single'" class="flex-1 flex justify-start mr-20 w-6/12">
@@ -67,7 +81,8 @@
                         w-80
                         h-14
                         transition-all
-                        hover:w-96 hover:px-8
+                        hover:w-96
+                        hover:px-8
                         border-r-0 border-l-0 border-t-0
                         hover:bg-gray-100
                         dark-hover:bg-black-600
@@ -99,7 +114,8 @@
                         w-80
                         h-14
                         transition-all
-                        hover:w-96 hover:px-8
+                        hover:w-96
+                        hover:px-8
                         border-r-0 border-l-0 border-t-0
                         hover:bg-gray-100
                         dark-hover:bg-black-600
