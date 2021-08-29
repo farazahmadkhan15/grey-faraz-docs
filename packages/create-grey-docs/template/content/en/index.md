@@ -1,6 +1,6 @@
 ---
 title: Home
-description: "Learn about the grey-docs framework!"
+description: 'Learn about the grey-docs framework!'
 position: 1
 category: Guide
 ---
@@ -9,7 +9,8 @@ The Grey Docs framework allows you to build beautiful documentation websites wit
 
 Grey Docs powers many of [Grey Software's Ecosystem Websites](https://org.grey.software/ecosystem/)!
 
-This framework is built upon the [Nuxt content docs theme](https://content.nuxtjs.org/themes/docs/), and we are grateful to the Nuxt team for open-sourcing their documentation framework!
+This framework is built upon the [Nuxt content docs theme](https://content.nuxtjs.org/themes/docs/), and we are grateful
+to the Nuxt team for open-sourcing their documentation framework!
 
 ## Get Started
 

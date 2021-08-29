@@ -2,13 +2,13 @@
   <div
     class="flex flex-wrap-reverse"
     :class="{
-      'lg:-mx-8': settings.layout === 'single'
+      'lg:-mx-8': settings.layout === 'single',
     }"
   >
     <div
       class="w-full lg:w-3/4 py-4 lg:pt-8 lg:pb-4 dark:border-gray-800"
       :class="{
-        'lg:border-l lg:border-r': settings.layout !== 'single'
+        'lg:border-l lg:border-r': settings.layout !== 'single',
       }"
     >
       <article class="prose dark:prose-dark max-w-none lg:px-8">
@@ -17,9 +17,7 @@
         <div v-for="release of releases" :key="release.name">
           <h2 :id="release.name" class="flex items-center justify-between">
             {{ release.name }}
-            <span
-              class="text-base font-normal text-gray-500"
-            >{{ formatDate(release) }}</span>
+            <span class="text-base font-normal text-gray-500">{{ formatDate(release) }}</span>
           </h2>
 
           <div class="nuxt-content" v-html="release.body" />
@@ -35,31 +33,29 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  layout ({ store }) {
+  layout({ store }) {
     return store.state.settings.layout || 'default'
   },
-  head () {
+  head() {
     return {
-      title: 'Releases'
+      title: 'Releases',
     }
   },
   computed: {
-    ...mapGetters([
-      'settings'
-    ]),
-    releases () {
+    ...mapGetters(['settings']),
+    releases() {
       return this.$store.state.releases
     },
-    toc () {
-      return this.releases.map(release => ({ id: release.name, depth: 2, text: release.name }))
-    }
+    toc() {
+      return this.releases.map((release) => ({ id: release.name, depth: 2, text: release.name }))
+    },
   },
   methods: {
-    formatDate (release) {
+    formatDate(release) {
       const date = new Date(release.date)
 
       return date.toLocaleDateString(this.$i18n.locale)
-    }
-  }
+    },
+  },
 }
 </script>

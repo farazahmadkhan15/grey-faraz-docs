@@ -1,6 +1,6 @@
 ---
 title: Components
-description: "Discover the components you can use to bring your documentation to life with the grey-docs theme!"
+description: 'Discover the components you can use to bring your documentation to life with the grey-docs theme!'
 position: 2
 category: Guide
 ---
@@ -9,14 +9,24 @@ category: Guide
 
 <author name="Arsala" desc="President at Grey Software" linkedin-url="https://linkedin.com/in/ArsalaBangash" twitter="arsalagrey" avatar-url="https://gitlab.com/uploads/-/system/user/avatar/2274539/avatar.png" gitlab-url="https://gitlab.com/ArsalaBangash" github-url="https://github.com/ArsalaBangash" ></author>
 
+=======
+### Profile Card
+
+<profile-card :profile="{name: 'Arsala Grey',
+avatar: 'https://gitlab.com/uploads/-/system/user/avatar/2274539/avatar.png',
+      position: 'Founder & President',
+      github: 'https://github.com/ArsalaBangash',
+      gitlab: 'https://gitlab.com/ArsalaBangash',
+      linkedin: 'https://linkedin.com/in/ArsalaBangash'}"></profile-card>
+>>>>>>> packages/example/content/en/components.md
 
 ### CTA Button
 
-<cta-button text="Explore" link="https://ecosystem.grey.software">
-</cta-button>
+<cta-button text="Explore" link="https://ecosystem.grey.software"></cta-button>
 
-### Sponser Card
-<SponsorCard name="ArsalaBangash" amount="$20/Month" sponsor-since="Sponsor Since Augest 2021" github-url= "https://github.com/ArsalaBangash" ></SponsorCard>
+### Sponsor Card
+
+<SponsorCard name="ArsalaBangash" amount="$20/Month" sponsor-since="Sponsor Since August 2020" github-url= "https://github.com/ArsalaBangash" ></SponsorCard>
 
 
 

@@ -10,7 +10,8 @@ With [yarn](https://yarnpkg.com/en/):
 yarn create grey-docs <project-name>
 ```
 
-Or with [npx](https://www.npmjs.com/package/npx) (`npx` is shipped by default since [npm](https://www.npmjs.com/get-npm) `5.2.0`)
+Or with [npx](https://www.npmjs.com/package/npx) (`npx` is shipped by default since [npm](https://www.npmjs.com/get-npm)
+`5.2.0`)
 
 ```bash
 npx create-ngrey-docs <project-name>

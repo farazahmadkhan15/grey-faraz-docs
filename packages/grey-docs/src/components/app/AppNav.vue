@@ -1,9 +1,7 @@
 <template>
   <aside
     class="
-      w-full
-      lg:w-1/5
-      lg:block
+      lg:w-1/5 lg:block
       fixed
       lg:relative
       inset-0
@@ -12,21 +10,13 @@
       z-30
       bg-white
       dark:bg-black-500
-      lg:bg-transparent
-      lg:dark:bg-transparent
+      lg:bg-transparent lg:dark:bg-transparent
+      container
+      mx-auto
     "
     :class="{ block: menu, hidden: !menu }"
   >
-    <div
-      class="
-        lg:sticky
-        lg:top-16
-        overflow-y-auto
-        h-full
-        lg:h-auto
-        lg:max-h-(screen-16)
-      "
-    >
+    <div class="lg:sticky lg:top-16 overflow-y-auto h-full lg:h-auto lg:max-h-(screen-16)">
       <ul class="p-4 lg:py-8 lg:pl-0 lg:pr-8">
         <li v-if="!settings.algolia" class="mb-4 lg:hidden">
           <AppSearch />
@@ -40,52 +30,21 @@
             'lg:mb-0': index === Object.keys(categories).length - 1,
           }"
         >
-          <p
-            v-if="category"
-            class="
-              mb-2
-              text-gray-500
-              uppercase
-              tracking-wider
-              font-bold
-              text-sm
-              lg:text-xs
-            "
-          >
+          <p v-if="category" class="mb-2 text-gray-500 uppercase tracking-wider font-bold text-sm lg:text-xs">
             {{ category }}
           </p>
           <ul>
-            <li
-              v-for="doc of docs"
-              :key="doc.slug"
-              class="text-gray-700 dark:text-gray-300"
-            >
+            <li v-for="doc of docs" :key="doc.slug" class="text-gray-700 dark:text-gray-300">
               <NuxtLink
                 :to="localePath(doc.to)"
-                class="
-                  px-2
-                  rounded
-                  font-medium
-                  py-1
-                  hover:text-primary-500
-                  flex
-                  items-center
-                  justify-between
-                "
+                class="px-2 rounded font-medium py-1 hover:text-primary-500 flex items-center justify-between"
                 exact-active-class="text-primary-500 bg-primary-100 hover:text-primary-500 dark:bg-primary-900"
               >
                 {{ doc.menuTitle || doc.title }}
                 <client-only>
                   <span
                     v-if="isDocumentNew(doc)"
-                    class="
-                      animate-pulse
-                      rounded-full
-                      bg-primary-500
-                      opacity-75
-                      h-2
-                      w-2
-                    "
+                    class="animate-pulse rounded-full bg-primary-500 opacity-75 h-2 w-2"
                   />
                 </client-only>
               </NuxtLink>
@@ -93,19 +52,7 @@
           </ul>
         </li>
         <li class="lg:hidden space-x-2">
-          <p
-            class="
-              mb-2
-              text-gray-500
-              uppercase
-              tracking-wider
-              font-bold
-              text-sm
-              lg:text-xs
-            "
-          >
-            More
-          </p>
+          <p class="mb-2 text-gray-500 uppercase tracking-wider font-bold text-sm lg:text-xs">More</p>
           <div class="flex items-center space-x-4">
             <a
               v-if="settings.twitter"
@@ -114,12 +61,7 @@
               rel="noopener noreferrer"
               title="Twitter"
               name="Twitter"
-              class="
-                inline-flex
-                text-gray-700
-                dark:text-gray-300
-                hover:text-primary-500
-              "
+              class="inline-flex text-gray-700 dark:text-gray-300 hover:text-primary-500"
             >
               <IconTwitter class="w-5 h-5" />
             </a>
@@ -130,12 +72,7 @@
               rel="noopener noreferrer"
               title="Github"
               name="Github"
-              class="
-                inline-flex
-                text-gray-700
-                dark:text-gray-300
-                hover:text-primary-500
-              "
+              class="inline-flex text-gray-700 dark:text-gray-300 hover:text-primary-500"
             >
               <IconGithub class="w-5 h-5" />
             </a>
@@ -146,12 +83,7 @@
               rel="noopener noreferrer"
               title="Gitlab"
               name="Gitlab"
-              class="
-                inline-flex
-                text-gray-700
-                dark:text-gray-300
-                hover:text-primary-500
-              "
+              class="inline-flex text-gray-700 dark:text-gray-300 hover:text-primary-500"
             >
               <IconGitlab class="w-5 h-5" />
             </a>
@@ -162,12 +94,7 @@
               rel="noopener noreferrer"
               title="Discord"
               name="Discord"
-              class="
-                inline-flex
-                text-gray-700
-                dark:text-gray-300
-                hover:text-primary-500
-              "
+              class="inline-flex text-gray-700 dark:text-gray-300 hover:text-primary-500"
             >
               <IconDiscord class="w-5 h-5" />
             </a>
@@ -178,12 +105,7 @@
               rel="noopener noreferrer"
               title="Discord"
               name="Discord"
-              class="
-                inline-flex
-                text-gray-700
-                dark:text-gray-300
-                hover:text-primary-500
-              "
+              class="inline-flex text-gray-700 dark:text-gray-300 hover:text-primary-500"
             >
               <IconLinkedin class="w-5 h-5" />
             </a>
@@ -195,42 +117,42 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   computed: {
-    ...mapGetters(["settings", "githubUrls"]),
+    ...mapGetters(['settings', 'githubUrls']),
     menu: {
       get() {
-        return this.$store.state.menu.open;
+        return this.$store.state.menu.open
       },
       set(val) {
-        this.$store.commit("menu/toggle", val);
+        this.$store.commit('menu/toggle', val)
       },
     },
     categories() {
-      return this.$store.state.categories[this.$i18n.locale];
+      return this.$store.state.categories[this.$i18n.locale]
     },
   },
   methods: {
     isCategoryActive(documents) {
-      return documents.some((document) => document.to === this.$route.fullPath);
+      return documents.some((document) => document.to === this.$route.fullPath)
     },
     isDocumentNew(document) {
       if (process.server) {
-        return;
+        return
       }
       if (!document.version || document.version <= 0) {
-        return;
+        return
       }
 
-      const version = localStorage.getItem(`document-${document.slug}-version`);
+      const version = localStorage.getItem(`document-${document.slug}-version`)
       if (document.version > Number(version)) {
-        return true;
+        return true
       }
 
-      return false;
+      return false
     },
   },
-};
+}
 </script>
