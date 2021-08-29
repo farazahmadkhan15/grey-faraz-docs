@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.6](https://gitlab.com/grey-software/templates/grey-docs/compare/grey-docs@0.4.5...grey-docs@0.4.6) (2021-08-29)
+
+**Note:** Version bump only for package grey-docs
+
+
+
+
+
 ## [0.4.5](https://gitlab.com/grey-software/templates/grey-docs/compare/grey-docs@0.4.4...grey-docs@0.4.5) (2021-08-28)
 
 **Note:** Version bump only for package grey-docs
