@@ -144,7 +144,7 @@
             <!-- <button class="dark:border-white w-28 h-11 ml-6 rounded-md btn-cta">
               <a href="">Support us</a>
             </button> -->
-            <cta-button link="https://github.com/sponsors/grey-software" text="Support Us" />
+            <cta-button link="https://grey.software/#support" text="Support Us" />
 
             <div class="flex items-center ml-12">
               <AppLangSwitcher />

@@ -236,7 +236,9 @@ module.exports = ({ nuxt }) => ({
         })
       })
     }),
-    require('@tailwindcss/typography'),
+    require('@tailwindcss/typography')({
+      className: 'typography',
+    }),
     require('tailwind-css-variables')({
       colors: 'color',
       screens: false,

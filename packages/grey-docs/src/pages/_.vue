@@ -11,7 +11,7 @@
         'lg:w-3/4': !document.fullscreen,
       }"
     >
-      <article class="prose dark:prose-dark max-w-none lg:px-8">
+      <article class="typography dark:typography-dark max-w-none lg:px-8">
         <h1 class="flex items-center justify-between">
           {{ document.title }}
           <Badge v-if="document.badge">{{ document.badge }}</Badge>
