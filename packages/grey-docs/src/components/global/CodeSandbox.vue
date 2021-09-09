@@ -36,32 +36,32 @@ export default {
   data() {
     return {
       isIntersecting: false,
-    }
+    };
   },
   mounted() {
     if (!window.IntersectionObserver) {
-      this.isIntersecting = true
-      return
+      this.isIntersecting = true;
+      return;
     }
 
     this.__observer = new window.IntersectionObserver((entries) => {
       entries.forEach(({ intersectionRatio, target: el }) => {
         if (intersectionRatio > 0) {
-          this.isIntersecting = true
-          this.__observer.disconnect()
-          delete this.__observer
+          this.isIntersecting = true;
+          this.__observer.disconnect();
+          delete this.__observer;
         }
-      })
-    })
-    this.__observer.observe(this.$el)
+      });
+    });
+    this.__observer.observe(this.$el);
   },
   beforeDestroy() {
     if (this.__observer) {
-      this.__observer.disconnect()
-      delete this.__observer
+      this.__observer.disconnect();
+      delete this.__observer;
     }
   },
-}
+};
 </script>
 
 <style scoped>

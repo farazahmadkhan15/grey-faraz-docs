@@ -1,7 +1,7 @@
 let handleOutsideClick
 
 export default {
-  bind(el, binding, vnode) {
+  bind (el, binding, vnode) {
     handleOutsideClick = (e) => {
       e.stopPropagation()
 
@@ -14,7 +14,7 @@ export default {
     document.addEventListener('click', handleOutsideClick)
   },
 
-  unbind() {
+  unbind () {
     document.removeEventListener('click', handleOutsideClick)
-  },
+  }
 }

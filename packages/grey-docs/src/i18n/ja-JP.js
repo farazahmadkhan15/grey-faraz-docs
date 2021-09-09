@@ -1,12 +1,12 @@
 export default {
   search: {
-    placeholder: 'ドキュメントを検索する ("/"を押すとここにフォーカスします)',
+    placeholder: 'ドキュメントを検索する ("/"を押すとここにフォーカスします)'
   },
   toc: {
-    title: '現在のページ',
+    title: '現在のページ'
   },
   article: {
     github: 'このページをGitHubで編集する',
-    updatedAt: '更新日',
-  },
+    updatedAt: '更新日'
+  }
 }

@@ -22,9 +22,11 @@ export default {
     },
     type: {
       type: String,
-      default: 'primary',
+      default: "primary",
       validator(value) {
-        return ['primary', 'info', 'success', 'warning', 'danger'].includes(value)
+        return ["primary", "info", "success", "warning", "danger"].includes(
+          value
+        );
       },
     },
   },
@@ -33,16 +35,16 @@ export default {
       return (
         this.icon ||
         {
-          primary: 'IconBadgeCheck',
-          info: 'IconInformationCircle',
-          success: 'IconCheckCircle',
-          warning: 'IconExclamationCircle',
-          danger: 'IconXCircle',
+          primary: "IconBadgeCheck",
+          info: "IconInformationCircle",
+          success: "IconCheckCircle",
+          warning: "IconExclamationCircle",
+          danger: "IconXCircle",
         }[this.type]
-      )
+      );
     },
   },
-}
+};
 </script>
 
 <style>

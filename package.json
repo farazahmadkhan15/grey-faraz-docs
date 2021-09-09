@@ -1,7 +1,7 @@
 {
-  "name": "grey-docs",
+  "name": "grey-docs-faraz",
   "private": true,
-  "description": "Grey Software's Documentation theme!",
+  "description": "Personal Portfolio theme forked from grey-docs",
   "license": "MIT",
   "contributors": [
     {
@@ -9,6 +9,9 @@
     },
     {
       "name": "Grey Software Team"
+    },
+    {
+      "name": "farazahmadkhan"
     }
   ],
   "workspaces": [

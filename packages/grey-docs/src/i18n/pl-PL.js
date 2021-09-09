@@ -1,11 +1,11 @@
 export default {
   search: {
-    placeholder: 'Szukaj w dokumentacji (Naciśnij "/" aby rozpocząć)',
+    placeholder: 'Szukaj w dokumentacji (Naciśnij "/" aby rozpocząć)'
   },
   toc: {
-    title: 'Na tej stronie',
+    title: 'Na tej stronie'
   },
   article: {
-    github: 'Edytuj stronę na GitHub',
-  },
+    github: 'Edytuj stronę na GitHub'
+  }
 }

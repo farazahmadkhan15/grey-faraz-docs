@@ -71,5 +71,5 @@ export default {
     twitter: String,
     avatarUrl: String,
   },
-}
+};
 </script>

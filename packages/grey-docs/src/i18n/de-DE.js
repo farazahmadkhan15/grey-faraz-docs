@@ -1,11 +1,11 @@
 export default {
   search: {
-    placeholder: 'Dokumentation durchsuchen (Drücke "/")',
+    placeholder: 'Dokumentation durchsuchen (Drücke "/")'
   },
   toc: {
-    title: 'Auf dieser Seite',
+    title: 'Auf dieser Seite'
   },
   article: {
-    github: 'Bearbeite diese Seite auf GitHub',
-  },
+    github: 'Bearbeite diese Seite auf GitHub'
+  }
 }
