@@ -1,5 +1,5 @@
-import remoteTheme from 'grey-docs'
-import localTheme from '../grey-docs'
+import remoteTheme from 'grey-docs-faraz'
+import localTheme from '../grey-docs-faraz'
 
 const config = {
   components: true,

@@ -5,11 +5,9 @@ position: 1
 category: Guide
 ---
 
-The Grey Docs framework allows you to build beautiful documentation websites with Markdown and Vue components!
-
-Grey Docs powers many of [Grey Software's Ecosystem Websites](https://org.grey.software/ecosystem/)!
-
-This framework is built upon the [Nuxt content docs theme](https://content.nuxtjs.org/themes/docs/), and we are grateful
+This framework is built upon the [Nuxt content docs theme](https://content.nuxtjs.org/themes/docs/),
+and [Grey Software's Ecosystem Websites](https://org.grey.software/ecosystem/)!
+and we are grateful
 to the Nuxt team for open-sourcing their documentation framework!
 
 ## Get Started
@@ -42,8 +40,5 @@ cd your-project-name
 yarn dev
 ```
 
-## Learn More
 
-- [Writing markdown content](https://content.nuxtjs.org/writing#markdown)
-- [Default Nuxt components](https://content.nuxtjs.org/themes/docs#components)
-- [Grey Software's Added Components](https://grey-docs-faraz.grey.software/components)
+
