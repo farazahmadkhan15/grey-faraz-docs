@@ -1,6 +1,6 @@
 {
-  "name": "create-grey-docs",
-  "version": "0.6.10",
+  "name": "create-grey-docs-faraz",
+  "version": "0.0.1",
   "license": "MIT",
   "files": [
     "src",
@@ -13,5 +13,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "575398d0fbba68ab6a3bfa06f70b2c9a3ef4af7b"
 }

@@ -3,7 +3,7 @@
   "npmClient": "yarn",
   "useWorkspaces": true,
   "conventionalCommits": true,
-  "packages": ["packages/create-grey-docs", "packages/grey-docs"],
+  "packages": ["packages/create-grey-docs-faraz", "packages/grey-docs-faraz"],
   "command": {
     "version": {
       "private": false

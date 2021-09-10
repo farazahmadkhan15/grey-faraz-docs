@@ -1,6 +1,6 @@
 {
-  "name": "grey-docs",
-  "version": "0.4.7",
+  "name": "grey-docs-faraz",
+  "version": "0.0.1",
   "license": "MIT",
   "files": [
     "src"
@@ -27,5 +27,6 @@
   "devDependencies": {
     "nuxt": "^2.15.8"
   },
-  "types": "./src/index.d.ts"
+  "types": "./src/index.d.ts",
+  "gitHead": "575398d0fbba68ab6a3bfa06f70b2c9a3ef4af7b"
 }

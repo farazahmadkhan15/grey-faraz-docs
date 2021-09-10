@@ -1,4 +1,4 @@
-import theme from 'grey-docs'
+import theme from 'grey-docs-faraz'
 
 export default theme({
   components: true,

@@ -1,6 +1,6 @@
 ---
 title: Home
-description: 'Learn about the grey-docs framework!'
+description: 'Learn about the grey-docs-faraz framework!'
 position: 1
 category: Guide
 ---
@@ -16,16 +16,16 @@ to the Nuxt team for open-sourcing their documentation framework!
 
 ### Create
 
-To get started, use our create-grey-docs package!
+To get started, use our create-grey-docs-faraz package!
 
 ```
-npx create-grey-docs
+npx create-grey-docs-faraz
 ```
 
 or
 
 ```
-yarn create grey-docs
+yarn create grey-docs-faraz
 ```
 
 ### Develop
@@ -46,4 +46,4 @@ yarn dev
 
 - [Writing markdown content](https://content.nuxtjs.org/writing#markdown)
 - [Default Nuxt components](https://content.nuxtjs.org/themes/docs#components)
-- [Grey Software's Added Components](https://grey-docs.grey.software/components)
+- [Grey Software's Added Components](https://grey-docs-faraz.grey.software/components)
